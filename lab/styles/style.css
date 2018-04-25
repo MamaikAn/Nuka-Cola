@@ -1,0 +1,149 @@
+body {
+    background-color: white;
+    color:rgb(247, 247, 202);
+    background-image: url(/assets/back4.png);
+    margin: 0px 0px 0px 0px;
+}
+hr {
+    color: black;
+    background-color: black;
+    border: none;
+    height: 0.1em;
+    margin: 1.2em 0;
+}
+h6 {
+    font-size:0.5em;
+}
+/*--- Header ---*/
+
+.header {
+    background-color: black;
+    background-image: url(/assets/header.png);
+    color: white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: middle;
+    font-size: 1.9em;
+    font-weight: bold;
+}
+.header .links {
+    display: flex;
+    flex-direction: row;
+}
+.header .links p, .header .links img{
+    margin-right: 4em;
+}
+.header .ss, .header p {
+    margin: auto;
+}
+.header .ss {
+    margin-right: 50px;
+}
+.header img {
+    max-height: 80px;
+    margin: 5px 0px 5px 10px;
+}
+/*--- body ---*/
+.body {
+    font-size:1.2em;
+    font-family:"georgia", serif;
+}
+.slide {
+    max-width: 100%;
+    border-bottom: 2px solid black;
+}
+/*--- body-distance ---*/
+/* .include {
+    grid-area: include;
+}
+.exclude1 {
+    grid-area: exclude1;
+}
+.exclude2 {
+    grid-area: exclude2;
+}
+.clude {
+    display: grid;
+    grid-template-columns: 20% 60% 1vh;
+    grid-template-rows: 1vh;
+    grid-template-areas: "exclude1 include exclude2";
+    margin-top: 1em;
+} */
+.include {
+    flex-basis: 1250px;
+    flex-shrink: 1;
+}
+.exclude1 {
+    /* width:512px; */
+    flex-shrink: 2;
+}
+.exclude2 {
+    /* width:512px; */
+    flex-shrink: 2;
+}
+.clude {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1em;
+}
+/*--- body-subscribe ---*/
+.subscribe {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align: middle;
+    background-image: url(/assets/header.png);
+    color: white;
+}
+.subscribe img {
+    max-height: 2em;
+    margin: .2em;
+}
+.subscribe p {
+    margin: auto .5em auto .5em;          
+}
+.subscribe input {
+    margin: 1em 0.1em; 
+    width: 30em;
+    height: 1.5em;
+}
+.subscribe button {
+    height: 1.95em;
+    width: 10em;
+    margin: 1em 0.5em 1em 0; 
+}
+/*--- body-advantages ---*/
+.advantages div:first-child img {
+    float:left;
+    margin-right: 1.2em;
+}
+.advantages div:last-child img {
+    float:right;
+    margin-left: 1.2em;
+}
+.advantages h3 {
+    font-weight: 530;
+    text-decoration: underline;
+}
+.advantages p, h3 {
+    margin: 0.1em 0;
+}
+.advantages h6 {
+    margin: 5em 0 2em 0;
+    text-align: center;
+    color: black;
+}
+.advantages h6:first-of-type {
+    margin: 1.5em 0;
+}
+.advantages img {
+    max-width: 19em;
+    border: 3px double Saddlebrown;
+    max-width: 25%;
+}
+.advantages p {
+    text-align: justify;
+}

@@ -40,14 +40,12 @@ h3.h3 {
     flex-direction: row;
     justify-content: space-between;
     vertical-align: middle;
-    position: fixed;
-    width: 100%;
 }
 .header .links {
     display: flex;
     flex-direction: row;
 }
-.header .links p{
+.header .links p, .header .links img{
     margin-right: 4em;
 }
 .header .ss, .header p {
@@ -56,31 +54,9 @@ h3.h3 {
 .header .ss {
     margin-right: 50px;
 }
-.header .ss div.nav {
-    display: none;
-    position: relative;
-    padding: 2vw;
-}
-.header ul {
-    position: absolute;
-    top: 65%;
-    left: -30%;
-    display: none;
-    background-image: url(../assets/header.png);
-    padding-left: 0;
-}
-.header li {
-    border:1px solid white;
-    list-style-type: none;
-    position: relative;
-    padding: 1vw 2em;
-}
-.header div.nav:hover ul{
-    display:block;
-}
 .header img {
     max-height: 80px;
-    margin: 5px 4vw 5px 10px;
+    margin: 5px 0px 5px 10px;
 }
 /*--- body ---*/
 .body {
@@ -90,6 +66,9 @@ h3.h3 {
 .slide, .slide1 {
     max-width: 100%;
     border-bottom: 2px solid black;
+}
+.slide1 {
+    border-top: 2px solid black;
 }
 /*--- body-distance ---*/
 /* .include {
@@ -112,7 +91,11 @@ h3.h3 {
     flex-basis: 1250px;
     flex-shrink: 1;
 }
-.exclude {
+.exclude1 {
+    /* width:512px; */
+    flex-shrink: 2;
+}
+.exclude2 {
     /* width:512px; */
     flex-shrink: 2;
 }
@@ -135,21 +118,20 @@ h3.h3 {
 }
 .subscribe img {
     max-height: 2em;
-    margin: auto .2em;
+    margin: .2em;
 }
 .subscribe p {
     margin: auto .5em auto .5em;          
-    text-align: center;
 }
 .subscribe input {
-    margin: auto 0.1em; 
-    width: 40%;
-    height: 100%;
+    margin: 1em 0.1em; 
+    width: 30em;
+    height: 1.5em;
 }
 .subscribe button {
-    height: 100%;
+    height: 1.95em;
     width: 10em;
-    margin: auto 0.5em auto 0; 
+    margin: 1em 0.5em 1em 0; 
 }
 /*--- body-advantages ---*/
 .advantages div:first-child img {
@@ -314,62 +296,4 @@ h3.h3 {
     background-color: black;
     color: black;
     margin-top: 1em;
-}
-/*--- media-dekstop ---*/
-@media (max-width: 2314px) {
-    .slide {
-        margin-top: 3em;
-    }
-}
-
-/*--- media-tablet ---*/
-@media (max-width: 1300px) {
-    .exclude {
-        flex-shrink: 1;
-        width: 2vw;
-    }
-}
-@media (max-width:1250px) {
-    .clude {
-        font-size: 1.6vw;
-    }
-    .header {
-        font-size: 2.4vw;
-    }
-    .header .links p{
-        margin-right: 10vw;
-    }
-    .header .ss {
-        margin-right: 3.8vw;
-    }
-    .header img {
-        max-height: 6.5vw;
-        margin: .35vw 4vw .35vw 1vw;
-    }
-}
-/*--- media-mobile ---*/
-@media screen and (max-width: 767px) {
-    .header .links{
-        display: none;
-    }
-    .header .ss p {
-        display: none;
-    }
-    .header .ss div.nav {
-        display: block;
-        right: 100%;
-    }
-    .include {
-        width: 20vw;
-    }
-    .slide {
-        margin-top: 6vw;
-    }
-    .news {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: "news1"
-                             "news2"
-                             "news3";
-    }
 }

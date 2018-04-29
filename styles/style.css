@@ -156,7 +156,7 @@ h3.h3 {
     float:left;
     margin-right: 1.2em;
 }
-.advantages div:last-child img {
+.advantages div:last-of-type img {
     float:right;
     margin-left: 1.2em;
 }
@@ -171,15 +171,14 @@ h3.h3 {
 .advantages div:first-of-type h6 {
     margin: 2em 0;
 }
-.advantages div:last-of-type h6 {
+.advantages h6:last-child {
     margin: 5em 0 2em 0;
     text-align: center;
     color: black;
 }
 .advantages img {
-    max-width: 19em;
     border: 3px double Saddlebrown;
-    max-width: 25%;
+    width: 25%;
 }
 .advantages p {
     text-align: justify;
@@ -188,12 +187,13 @@ h3.h3 {
 .news {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: .6vw;
+    grid-column-gap: 1vw;
     grid-template-rows: 100%;
     grid-template-areas: "news1 news2 news3";
 }
 .news img {
     max-width: 100%;
+    margin: auto auto;
 }
 .news h3, .news p {
     margin-top: 0.15em;
@@ -216,11 +216,11 @@ h3.h3 {
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 0.5vw;
+    grid-column-gap: 2vw;
     grid-template-areas: "sale1 sale2";
 }
 .sales img {
-    max-width: 100%;
+    width: 100%;
 }
 .sale1 {
     grid-area: sale1;
@@ -315,6 +315,9 @@ h3.h3 {
     color: black;
     margin-top: 1em;
 }
+.mobile {
+    display:none;
+}
 /*--- media-dekstop ---*/
 @media only screen and (max-device-width: 2314px) and (min-device-width: 1300px) {
     .slide {
@@ -328,19 +331,19 @@ h3.h3 {
 }
 
 /*--- media-tablet ---*/
-@media only screen and (max-device-width: 1300px) and (min-device-width:1250px) {
+@media (max-device-width: 1300px) {
     .exclude {
         flex-shrink: 1;
         width: 2vw;
     }
 }
-@media only screen and (max-width: 1300px) and (min-width:1250px) {
+@media (max-width: 1300px) {
     .exclude {
         flex-shrink: 1;
         width: 2vw;
     }
 }
-@media only screen and (max-device-width:1250px) and (min-device-width:767px) {
+@media (max-device-width:1250px) {
     .clude {
         font-size: 1.6vw;
     }
@@ -358,7 +361,7 @@ h3.h3 {
         margin: .35vw 4vw .35vw 1vw;
     }
 }
-@media only screen and (max-width:1250px) and (min-width:767px) {
+@media (max-width:1250px) {
     .clude {
         font-size: 1.6vw;
     }
@@ -377,7 +380,16 @@ h3.h3 {
     }
 }
 /*--- media-mobile ---*/
-@media only screen and (max-device-width: 767px) {
+@media (max-device-width: 767px) {
+    .h3 {
+        margin: 5vw 0;
+    }
+    .mobile {
+        display: block;
+    }
+    hr.mobile {
+        margin: 5vw 0;
+    }
     .header .links{
         display: none;
     }
@@ -388,21 +400,50 @@ h3.h3 {
         display: block;
         right: 100%;
     }
-    .include {
-        width: 20vw;
-    }
     .slide {
         margin-top: 6vw;
     }
+    .advantages div:first-child img, .advantages div:last-of-type img {
+        float:none;
+        width:100%;
+        margin: 0;
+        border: 0;
+    }
+    .advantages h3 {
+        text-align: center;
+        margin: 2.5vw 0;
+    }
+    .advantages h6 {
+        margin: 7% 0;
+    }
+    .advantages p {
+        margin-bottom: 5vw;
+    }
     .news {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 100%;
+        grid-template-rows: 100% 100% 100%;
         grid-template-areas: "news1"
                              "news2"
                              "news3";
+    }
+    .news img {
+        padding: 0 13.5vw;
+    }
+    .news h3, .sales h3 {
+        text-align: center;
+        margin: 2vw 0;
+    }
+    .sales {
+        grid-template-rows: 100% 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "sale1" 
+                             "sale2";
     }
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
+    .mobile {
+        display: block;
+    }
     .header .links{
         display: none;
     }
@@ -413,17 +454,18 @@ h3.h3 {
         display: block;
         right: 100%;
     }
-    .include {
-        width: 20vw;
-    }
     .slide {
         margin-top: 6vw;
     }
     .news {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 100%;
+        grid-template-rows: 100% 100% 100%;
+        grid-row-gap: 10vw;
         grid-template-areas: "news1"
                              "news2"
                              "news3";
+    }
+    .news img {
+        padding: 0 13.5vw;
     }
 }

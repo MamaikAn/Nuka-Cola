@@ -1,4 +1,326 @@
-    .exclude {
-        flex-shrink: 1;
-        width: 2vw;
-    }
+body {
+    background-color: white;
+    color:rgb(247, 247, 202);
+    background-image: url(../assets/back4.png);
+    background-repeat: repeat;
+    margin: 0px 0px 0px 0px;
+}
+hr {
+    color: black;
+    background-color: black;
+    border: none;
+    height: 2px;
+    margin: 1.2em 0;
+}
+h6 {
+    font-size:0.5em;
+}
+.h3 {
+    margin: 0.5em 0 0.65em 0;
+    padding: 0.2em;
+    padding-bottom: 0.3em;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    font-size: 1.2em;
+}
+h3.h3 {
+    text-align:center;
+}
+/*--- Header ---*/
+.header, .h3{
+    background-color: black;
+    background-image: url(../assets/header.png);
+    background-repeat: repeat;
+    color: white;
+    font-weight: bold;
+}
+.header {
+    font-size: 1.9em;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: middle;
+    position: fixed;
+    width: 100%;
+}
+.header .links {
+    display: flex;
+    flex-direction: row;
+}
+.header .links p{
+    margin-right: 4em;
+}
+.header .ss, .header p {
+    margin: auto;
+}
+.header .ss {
+    margin-right: 50px;
+}
+.header .ss div.nav {
+    display: none;
+    position: relative;
+    padding: 2vw;
+}
+.header ul {
+    position: absolute;
+    top: 65%;
+    left: -30%;
+    display: none;
+    background-image: url(../assets/header.png);
+    padding-left: 0;
+}
+.header li {
+    border:1px solid white;
+    list-style-type: none;
+    position: relative;
+    padding: 1vw 2em;
+}
+.header div.nav:hover ul{
+    display:block;
+}
+.header img {
+    max-height: 80px;
+    margin: 5px 4vw 5px 10px;
+}
+/*--- body ---*/
+.body {
+    font-size:1.2em;
+    font-family:"georgia", serif;
+}
+.slide {
+    margin-top: 3em;
+}
+.slide, .slide1 {
+    max-width: 100%;
+    border-bottom: 2px solid black;
+}
+/*--- body-distance ---*/
+/* .include {
+    grid-area: include;
+}
+.exclude1 {
+    grid-area: exclude1;
+}
+.exclude2 {
+    grid-area: exclude2;
+}
+.clude {
+    display: grid;
+    grid-template-columns: 20% 60% 1vh;
+    grid-template-rows: 1vh;
+    grid-template-areas: "exclude1 include exclude2";
+    margin-top: 1em;
+} */
+.include {
+    flex-basis: 1250px;
+    flex-shrink: 1;
+}
+.exclude {
+    /* width:512px; */
+    flex-shrink: 2;
+}
+.clude {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1em;
+}
+/*--- body-subscribe ---*/
+.subscribe {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align: middle;
+    background-image: url(../assets/header.png);
+    background-repeat: repeat;
+    color: white;
+}
+.subscribe img {
+    max-height: 2em;
+    margin: auto .2em;
+}
+.subscribe p {
+    margin: auto .5em auto .5em;          
+    text-align: center;
+}
+.subscribe input {
+    margin: auto 0.1em; 
+    width: 40%;
+    height: 100%;
+}
+.subscribe button {
+    height: 100%;
+    width: 10em;
+    margin: auto 0.5em auto 0; 
+}
+/*--- body-advantages ---*/
+.advantages div:first-child img {
+    float:left;
+    margin-right: 1.2em;
+}
+.advantages div:last-of-type img {
+    float:right;
+    margin-left: 1.2em;
+}
+.advantages h3, .news h3 {
+    font-weight: 530;
+    text-decoration: underline;
+    border:0;
+}
+.advantages p, .advantages h3 {
+    margin: 0.1em 0;
+}
+.advantages div:first-of-type h6 {
+    margin: 2em 0;
+}
+.advantages h6:last-child {
+    margin: 5em 0 2em 0;
+    text-align: center;
+    color: black;
+}
+.advantages img {
+    border: 3px double Saddlebrown;
+    width: 25%;
+}
+.advantages p {
+    text-align: justify;
+}
+/*--- body-news ---*/
+.news {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1vw;
+    grid-template-rows: 100%;
+    grid-template-areas: "news1 news2 news3";
+}
+.news img {
+    max-width: 100%;
+    margin: auto auto;
+}
+.news h3, .news p {
+    margin-top: 0.15em;
+    margin-bottom: 0.5em;
+}
+.news p, .sales p {
+    text-align: justify;
+}
+.news1 {
+    grid-area: news1;
+}
+.news2 {
+    grid-area: news2;
+}
+.news3 {
+    grid-area: news3;
+}
+/*--- sales ---*/
+.sales {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2vw;
+    grid-template-areas: "sale1 sale2";
+}
+.sales img {
+    width: 100%;
+}
+.sale1 {
+    grid-area: sale1;
+}
+.sale2 {
+    grid-area: sale2;
+}
+.sales h3, .sales p {
+    margin-top: .2em;
+    margin-bottom: .1em;
+}
+.sales p {
+    margin-bottom: 1em;
+}
+/*--- contact ---*/
+.contact {
+    display: grid;
+    grid-template-columns: .05fr .5fr .45fr .05fr;
+    grid-template-rows: 100%;
+    grid-column-gap: 2em;
+    grid-template-areas: "... social twitter ...";
+}
+/*--- contact-social ---*/
+.social {
+    grid-area: social;
+    background-image: url(../assets/header.png);
+    background-repeat: repeat;
+    color: white;
+    /* display: flex;
+    flex-direction: column; */
+}
+.social div:last-child{
+    display: flex;
+    flex-direction: column;
+}
+.social h3 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+.social div:first-child img {
+    margin: 1.5em 0 0 12.7em;
+    max-width:100%;
+}
+.social a img {
+    width: 10%;
+    margin: 0 .5em 1.5em 1em;
+    float:left;
+}
+.social a p {
+    margin-top: .67em;
+    color:white;
+}
+.social a {
+    text-decoration: none;
+}
+.social a p:hover {
+    text-decoration: underline;
+}
+/*--- contact-twitter ---*/
+.twitter {
+    grid-area: twitter;
+    background-color: white;
+}
+.twitter img{
+    width:81%;
+    float:left;
+}
+/*--- footer ---*/
+.footer img{
+    max-width: 10%;
+    float: left;
+    margin: auto;
+}
+.footer img:nth-child(3) {
+    margin: 1.2em 1em;
+}
+.footer img:nth-last-child(1) {
+    margin: 2em 1em;
+}
+.footer img:nth-last-child(2) {
+    margin: 2.2em 1em;
+}
+.footer img:nth-last-child(3) {
+    margin: 2.2em 1em;
+}
+.footer img:nth-last-child(4) {
+    margin: 1em 1em;
+}
+.footer img:nth-last-child(5) {
+    margin: 0em 1em 1.2em 1em;
+}
+/*--- end ---*/
+.end {
+    background-color: black;
+    color: black;
+}
+.mobile {
+    display:none;
+}

@@ -18,6 +18,11 @@
         max-height: 6.5vw;
         margin: .35vw 4vw .35vw 1vw;
     }
+    .social div:first-child img{
+        width: 12%;
+        margin-left: 17.5vw;
+        margin-right: 0;
+    }
     .footer img:nth-last-child(1){
         margin:0;
         padding-top: 4.65vw;
@@ -32,4 +37,3 @@
         padding-top: 2.3vw;
         padding-right: 1vw;
     }
-}

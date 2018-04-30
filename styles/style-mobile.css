@@ -103,6 +103,9 @@
         margin-top: .8vw;
         font-size: 2.5vw;
     }
+    .twitter-timeline {
+        height: 100%;
+    }
     .footer img {
         float:none;
     }
@@ -120,4 +123,3 @@
         padding-bottom: 4vw;
         padding-right: 2vw;
     }
-}

@@ -249,6 +249,10 @@ h3.h3 {
     background-image: url(../assets/header.png);
     background-repeat: repeat;
     color: white;
+    /* display: flex;
+    flex-direction: column; */
+}
+.social div:last-child{
     display: flex;
     flex-direction: column;
 }
@@ -257,16 +261,16 @@ h3.h3 {
     margin-top: 1em;
     margin-bottom: 1.5em;
 }
-.social img {
-    margin-top: 1.5em;
+.social div:first-child img {
+    margin: 1.5em 0 0 12.7em;
     max-width:100%;
 }
-.social div img {
-    max-width: 10%;
-    margin: 0 .5em 1.5em 2.25em;
+.social a img {
+    width: 10%;
+    margin: 0 .5em 1.5em 1em;
     float:left;
 }
-.social div p {
+.social a p {
     margin-top: .67em;
     color:white;
 }
@@ -282,7 +286,7 @@ h3.h3 {
     background-color: white;
 }
 .twitter img{
-    max-width:81%;
+    width:81%;
     float:left;
 }
 /*--- footer ---*/
@@ -295,25 +299,24 @@ h3.h3 {
     margin: 1.2em 1em;
 }
 .footer img:nth-last-child(1) {
-    margin: 1.6em 1em;
+    margin: 2em 1em;
 }
 .footer img:nth-last-child(2) {
-    margin: 1.7em 1em;
+    margin: 2.2em 1em;
 }
 .footer img:nth-last-child(3) {
-    margin: 1.7em 1em;
+    margin: 2.2em 1em;
 }
 .footer img:nth-last-child(4) {
-    margin: 1.1em 1em;
+    margin: 1em 1em;
 }
 .footer img:nth-last-child(5) {
-    margin: 0em 1em;
+    margin: 0em 1em 1.2em 1em;
 }
 /*--- end ---*/
 .end {
     background-color: black;
     color: black;
-    margin-top: 1em;
 }
 .mobile {
     display:none;
@@ -344,7 +347,7 @@ h3.h3 {
     }
 }
 @media (max-device-width:1250px) {
-    .clude {
+    .clude, .h3 {
         font-size: 1.6vw;
     }
     .header {
@@ -362,7 +365,7 @@ h3.h3 {
     }
 }
 @media (max-width:1250px) {
-    .clude {
+    .clude, .h3 {
         font-size: 1.6vw;
     }
     .header {
@@ -403,6 +406,23 @@ h3.h3 {
     .slide {
         margin-top: 6vw;
     }
+    .subscribe input {
+        height: 2.5vw;
+    }
+    .subscribe button {
+        height: 3.1vw;
+        font-size: 1.5vw;
+    }
+    .subscribe img {
+        width: 5vw;
+        max-height: 5vw;
+    }
+    .subscribe p {
+        font-size: 2.1vw;
+    }
+    .subscribe p, .subscribe img, .subscribe input, .subscribe button{
+        margin: auto auto;
+    }
     .advantages div:first-child img, .advantages div:last-of-type img {
         float:none;
         width:100%;
@@ -438,6 +458,48 @@ h3.h3 {
         grid-template-columns: 100%;
         grid-template-areas: "sale1" 
                              "sale2";
+    }
+    .contact {
+        padding-left: 15.3vw;
+        margin-bottom: 4.5vw;
+        grid-template-columns: 80%;
+        grid-row-gap: 5vw;
+        grid-template-rows: 100% 100%;
+        grid-template-areas: "social"
+                             "twitter";
+    }
+    .social div:last-child{
+        margin: 0 10%;
+        display: grid;
+        grid-template-columns: 28.5vw 28.5vw;
+        grid-template-rows: 100% 100%;
+    }
+    .social div:first-child img{
+        width: 8%;
+        padding: 0 15%;
+    }
+    .social a img{
+        width: 15%;
+    }
+    .social h3 {
+        font-size: 1.6vw;
+        margin: 0 0 2vw 0;
+    }
+    .social a p {
+        margin-top: .8vw;
+        font-size: 2.5vw;
+    }
+    .footer img {
+        float:none;
+    }
+    .footer img:nth-child(3) {
+        margin: 1.2em 1em;
+    }
+    .footer img:nth-last-child(1), .footer img:nth-last-child(2), .footer img:nth-last-child(3) {
+        padding-bottom: 3vw;
+    }
+    .footer img:nth-last-child(4) {
+        padding-bottom: 2.2vw;
     }
 }
 @media (max-width: 767px) {

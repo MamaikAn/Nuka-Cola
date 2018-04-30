@@ -1,3 +1,9 @@
+@import url('style-desktop.css') (max-device-width: 1300px);
+@import url('style-desktop.css') (max-width: 1300px);
+@import url('style-tablet.css') (max-device-width:1250px);
+@import url('style-tablet.css') (max-width:1250px);
+@import url('style-mobile.css') (max-device-width: 767px);
+@import url('style-mobile.css') (max-width: 767px);
 body {
     background-color: white;
     color:rgb(247, 247, 202);
@@ -86,6 +92,9 @@ h3.h3 {
 .body {
     font-size:1.2em;
     font-family:"georgia", serif;
+}
+.slide {
+    margin-top: 3em;
 }
 .slide, .slide1 {
     max-width: 100%;
@@ -320,214 +329,4 @@ h3.h3 {
 }
 .mobile {
     display:none;
-}
-/*--- media-dekstop ---*/
-@media only screen and (max-device-width: 2314px) and (min-device-width: 1300px) {
-    .slide {
-        margin-top: 3em;
-    }
-}
-@media only screen and (max-width: 2314px) and (min-width: 1300px) {
-    .slide {
-        margin-top: 3em;
-    }
-}
-
-/*--- media-tablet ---*/
-@media (max-device-width: 1300px) {
-    .exclude {
-        flex-shrink: 1;
-        width: 2vw;
-    }
-}
-@media (max-width: 1300px) {
-    .exclude {
-        flex-shrink: 1;
-        width: 2vw;
-    }
-}
-@media (max-device-width:1250px) {
-    .clude, .h3 {
-        font-size: 1.6vw;
-    }
-    .header {
-        font-size: 2.4vw;
-    }
-    .header .links p{
-        margin-right: 10vw;
-    }
-    .header .ss {
-        margin-right: 3.8vw;
-    }
-    .header img {
-        max-height: 6.5vw;
-        margin: .35vw 4vw .35vw 1vw;
-    }
-}
-@media (max-width:1250px) {
-    .clude, .h3 {
-        font-size: 1.6vw;
-    }
-    .header {
-        font-size: 2.4vw;
-    }
-    .header .links p{
-        margin-right: 10vw;
-    }
-    .header .ss {
-        margin-right: 3.8vw;
-    }
-    .header img {
-        max-height: 6.5vw;
-        margin: .35vw 4vw .35vw 1vw;
-    }
-}
-/*--- media-mobile ---*/
-@media (max-device-width: 767px) {
-    .h3 {
-        margin: 5vw 0;
-    }
-    .mobile {
-        display: block;
-    }
-    hr.mobile {
-        margin: 5vw 0;
-    }
-    .header .links{
-        display: none;
-    }
-    .header .ss p {
-        display: none;
-    }
-    .header .ss div.nav {
-        display: block;
-        right: 100%;
-    }
-    .slide {
-        margin-top: 6vw;
-    }
-    .subscribe input {
-        height: 2.5vw;
-    }
-    .subscribe button {
-        height: 3.1vw;
-        font-size: 1.5vw;
-    }
-    .subscribe img {
-        width: 5vw;
-        max-height: 5vw;
-    }
-    .subscribe p {
-        font-size: 2.1vw;
-    }
-    .subscribe p, .subscribe img, .subscribe input, .subscribe button{
-        margin: auto auto;
-    }
-    .advantages div:first-child img, .advantages div:last-of-type img {
-        float:none;
-        width:100%;
-        margin: 0;
-        border: 0;
-    }
-    .advantages h3 {
-        text-align: center;
-        margin: 2.5vw 0;
-    }
-    .advantages h6 {
-        margin: 7% 0;
-    }
-    .advantages p {
-        margin-bottom: 5vw;
-    }
-    .news {
-        grid-template-columns: 100%;
-        grid-template-rows: 100% 100% 100%;
-        grid-template-areas: "news1"
-                             "news2"
-                             "news3";
-    }
-    .news img {
-        padding: 0 13.5vw;
-    }
-    .news h3, .sales h3 {
-        text-align: center;
-        margin: 2vw 0;
-    }
-    .sales {
-        grid-template-rows: 100% 100%;
-        grid-template-columns: 100%;
-        grid-template-areas: "sale1" 
-                             "sale2";
-    }
-    .contact {
-        padding-left: 15.3vw;
-        margin-bottom: 4.5vw;
-        grid-template-columns: 80%;
-        grid-row-gap: 5vw;
-        grid-template-rows: 100% 100%;
-        grid-template-areas: "social"
-                             "twitter";
-    }
-    .social div:last-child{
-        margin: 0 10%;
-        display: grid;
-        grid-template-columns: 28.5vw 28.5vw;
-        grid-template-rows: 100% 100%;
-    }
-    .social div:first-child img{
-        width: 8%;
-        padding: 0 15%;
-    }
-    .social a img{
-        width: 15%;
-    }
-    .social h3 {
-        font-size: 1.6vw;
-        margin: 0 0 2vw 0;
-    }
-    .social a p {
-        margin-top: .8vw;
-        font-size: 2.5vw;
-    }
-    .footer img {
-        float:none;
-    }
-    .footer img:nth-child(3) {
-        margin: 1.2em 1em;
-    }
-    .footer img:nth-last-child(1), .footer img:nth-last-child(2), .footer img:nth-last-child(3) {
-        padding-bottom: 3vw;
-    }
-    .footer img:nth-last-child(4) {
-        padding-bottom: 2.2vw;
-    }
-}
-@media (max-width: 767px) {
-    .mobile {
-        display: block;
-    }
-    .header .links{
-        display: none;
-    }
-    .header .ss p {
-        display: none;
-    }
-    .header .ss div.nav {
-        display: block;
-        right: 100%;
-    }
-    .slide {
-        margin-top: 6vw;
-    }
-    .news {
-        grid-template-columns: 100%;
-        grid-template-rows: 100% 100% 100%;
-        grid-row-gap: 10vw;
-        grid-template-areas: "news1"
-                             "news2"
-                             "news3";
-    }
-    .news img {
-        padding: 0 13.5vw;
-    }
 }

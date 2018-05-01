@@ -1,0 +1,6 @@
+@import url("about-desktop.css");
+@import url("about-desktop.css");
+@import url("about-tablet.css") (max-device-width:1250px);
+@import url("about-tablet.css") (max-width:1250px);
+@import url("about-mobile.css") (max-device-width: 767px);
+@import url("about-mobile.css") (max-width: 767px);

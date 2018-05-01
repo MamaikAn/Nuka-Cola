@@ -1,0 +1,85 @@
+    .clude, .h3 {
+        font-size: 1.6vw;
+    }
+    .exclude {
+        flex-shrink: 1;
+        width: 2vw;
+    }
+    .header {
+        font-size: 2.4vw;
+    }
+    .header .links p{
+        margin-right: 10vw;
+    }
+    .header .ss {
+        margin-right: 3.8vw;
+    }
+    .header img {
+        max-height: 6.5vw;
+        margin: .35vw 4vw .35vw 1vw;
+    }
+    .body {
+        margin-top: 4vw;
+    }
+    .include>.news:first-child>h3 {
+        margin: 5vw 0 2vw 0;
+    }
+    h3.h3 {
+        margin: 3vw 0 2vw 0;
+        display: block;
+    }
+    .news>div:first-of-type {
+        height: 100%;
+        margin-bottom: 0;
+    }
+    .news>div:first-of-type p {
+        margin-bottom: 0;
+    }
+    .news>div:last-of-type {
+        margin-top: 0;
+    }
+    .news img {
+        margin-right: 2vw;
+    }
+    .comments {
+        margin-left: 2vw;
+    }
+    .comments img {
+        padding-left: 1vw;
+        margin-right: 1vw;
+    }
+    .comments p {
+        margin-top: 1vw;
+        padding-right: 1vw;
+    }
+    .comments p:last-of-type {
+        margin-bottom: .5vw;
+    }
+    .comments input, .comments textarea {
+        margin: 0 1.4vw 1vw 1vw;
+        font-size: 1.3vw;
+    }
+    .comments input:first-of-type {
+        margin: 0 0 1vw 1vw;
+    }
+    .comments textarea {
+        margin-bottom: .7vw;
+        font-size: 1.45vw;
+    }
+    .comments input:last-of-type {
+        width: 10vw;
+    }
+    .footer img:nth-last-child(1){
+        margin:0;
+        padding-top: 4.65vw;
+    }
+    .footer img:nth-last-child(2), .footer img:nth-last-child(3) {
+        margin:0;
+        padding-top: 5vw;
+        padding-right: 1vw;
+    }
+    .footer img:nth-last-child(4) {
+        margin:0;
+        padding-top: 2.3vw;
+        padding-right: 1vw;
+    } 

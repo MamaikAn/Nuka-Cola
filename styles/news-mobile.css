@@ -1,0 +1,97 @@
+    .mobile {
+        display: block;
+    }
+    hr.mobile {
+        margin: 5vw 0;
+    }
+    .header .links{
+        display: none;
+    }
+    .header .ss p {
+        display: none;
+    }
+    .header .ss div.nav {
+        display: block;
+        right: 100%;
+    }
+    .clude, .h3 {
+        font-size: 3vw;
+    }
+    .news>div:first-of-type, .news>div:last-child{
+        display: flex;
+        flex-direction: column;
+    }
+    .news>div:first-of-type h3 {
+        order: 1;
+        text-align: center;
+    }
+    .news>div:first-of-type img {
+        order: 2;
+    }
+    .news>div:first-child p, .news>div:first-of-type p {
+        order: 3;
+    }   
+    .news div>img {
+        float: none;
+        width: 100%;
+    }
+    .comments {
+        display: flex;
+        flex-direction: column;
+        float: none;
+        order: 4;
+        width: 99%;
+        margin-left:0;
+    }
+    .comments p {
+        margin: 1vw;
+        margin-left: 2vw;
+    }
+    .comments img {
+        padding-left: 0;
+        padding-right: 2vw;
+        margin-right:0;
+    }
+    .comments form {
+        margin-top: 1vw;
+    }
+    .comments input, .comments textarea, .comments input:first-child {
+        margin-left: 2vw;
+        height: 2.5vw;
+        font-size: 1.8vw;
+    }
+    .comments textarea {
+        font-size: 2.05vw;
+        height: 2.6vw;
+    }
+    .comments input[type="email"] {
+        width: 53.7vw;
+    }
+    .comments textarea {
+        width: 85vw;
+    }
+    .comments input[type="submit"] {
+        width: 15vw;
+        height: 4vw;
+    }
+    .footer img {
+        float:none;
+    }
+    .footer img:nth-child(3) {
+        margin: 0;
+        margin-bottom: 1.2vw;
+    }
+    .footer img:nth-last-child(1){
+        margin:0;
+        padding-bottom: 7.8vw;
+    }
+    .footer img:nth-last-child(2), .footer img:nth-last-child(3) {
+        margin:0;
+        padding-bottom: 9vw;
+        padding-right: 2vw;
+    }
+    .footer img:nth-last-child(4) {
+        margin:0;
+        padding-bottom: 4vw;
+        padding-right: 2vw;
+    }

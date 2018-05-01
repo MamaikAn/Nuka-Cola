@@ -1,8 +1,6 @@
-    .mobile {
-        display: block;
-    }
-    hr.mobile {
-        margin: 5vw 0;
+    .clude, .h3 {
+        font-size: 2vw;
+        line-height: 4vw !important;
     }
     .header .links{
         display: none;
@@ -14,12 +12,10 @@
         display: block;
         right: 100%;
     }
-    .clude, .h3 {
-        font-size: 3vw;
-    }
     .news>div:first-of-type, .news>div:last-child{
         display: flex;
         flex-direction: column;
+        height: auto;
     }
     .news>div:first-of-type h3 {
         order: 1;
@@ -42,6 +38,7 @@
         order: 4;
         width: 99%;
         margin-left:0;
+        height: auto;
     }
     .comments p {
         margin: 1vw;
@@ -57,21 +54,19 @@
     }
     .comments input, .comments textarea, .comments input:first-child {
         margin-left: 2vw;
-        height: 2.5vw;
-        font-size: 1.8vw;
+        height: 4vw;
+        font-size: 3vw;
     }
     .comments textarea {
-        font-size: 2.05vw;
-        height: 2.6vw;
+        font-size: 1.5vw;
+        height: 6vw;
+        width: 85.3vw;
     }
     .comments input[type="email"] {
         width: 53.7vw;
     }
-    .comments textarea {
-        width: 85vw;
-    }
     .comments input[type="submit"] {
-        width: 15vw;
+        width: 17vw;
         height: 4vw;
     }
     .footer img {

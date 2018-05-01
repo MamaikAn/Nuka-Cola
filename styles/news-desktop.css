@@ -87,8 +87,8 @@ h3.h3 {
 /*--- body ---*/
 .body {
 	margin-top: 5em;
-    font-size:1.2em;
     font-family:"georgia", serif;
+    font-size: 1.2em;
 }
 .news img {
     float:left;
@@ -97,7 +97,6 @@ h3.h3 {
 }
 .news p {
     text-align: justify;
-    line-height: 1.3em;
 }
 .news>div:first-of-type {
     height: 456px;

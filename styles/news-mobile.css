@@ -1,6 +1,6 @@
     .clude, .h3 {
         font-size: 2vw;
-        line-height: 4vw !important;
+        line-height: 4vw;
     }
     .header .links{
         display: none;
@@ -58,8 +58,6 @@
         font-size: 3vw;
     }
     .comments textarea {
-        font-size: 1.5vw;
-        height: 6vw;
         width: 85.3vw;
     }
     .comments input[type="email"] {

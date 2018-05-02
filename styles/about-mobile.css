@@ -15,6 +15,10 @@
         display: block;
         right: 100%;
     }
+    .include .footer p {
+        font-size: 1.5vw;
+        line-height: 2.5vw;
+    }
     .footer img {
         float:none;
     }

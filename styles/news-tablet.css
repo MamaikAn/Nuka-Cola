@@ -29,17 +29,12 @@
         display: block;
     }
     .news>div:first-of-type {
-        height: 100%;
-        margin-bottom: 0;
+        margin-bottom: 1vw;
     }
-    .news>div:first-of-type p {
-        margin-bottom: 0;
-    }
-    .news>div:last-of-type {
-        margin-top: 0;
-    }
-    .news img {
+    .news>div:first-of-type>img {
         margin-right: 2vw;
+        width: 45vw;
+        height: 45vw;
     }
     .comments {
         margin-left: 2vw;

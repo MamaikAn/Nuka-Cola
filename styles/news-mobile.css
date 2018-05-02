@@ -1,6 +1,6 @@
     .clude, .h3 {
         font-size: 2vw;
-        line-height: 4vw;
+        line-height: 3vw;
     }
     .header .links{
         display: none;
@@ -27,9 +27,10 @@
     .news>div:first-child p, .news>div:first-of-type p {
         order: 3;
     }   
-    .news div>img {
+    .news div:first-of-type>img {
         float: none;
         width: 100%;
+        height: 100%;
     }
     .comments {
         display: flex;

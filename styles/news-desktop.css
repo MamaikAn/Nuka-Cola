@@ -91,44 +91,42 @@ h3.h3 {
     font-size: 1.2em;
 }
 .news img {
-    float:left;
-    width: 40%;
     margin-right: 2em;
 }
 .news p {
     text-align: justify;
 }
-.news>div:first-of-type {
-    height: 456px;
-    margin-bottom: 1em;
-    display: block;
+.news>div:first-of-type>div {
+    flex-basis:100%;
 }
-.news>div:last-of-type {
-    margin-top: 3em;
-    display: block;
+.news>div {
+    display: flex;
+    flex-direction: row;
+}
+.news>div:last-of-type>div:last-of-type {
+    flex-basis: 100%;
 }
 .comments {
-    float:right;
-    width: 40%;
-    height: 100%;
     border: 2px solid black;
     margin-left: 2em;
+    order: 1;
+    flex-basis: 60%;
 }
 .comments img {
     width: 14%;
     padding-left: 1em;
     margin-right: 1em;
+    float: left;
 }
 .comments p {
     padding-right: 1em;
-}
-.comments p:last-of-type {
-    margin-bottom: .5em;
+    order: 0;
 }
 .comments input, .comments textarea {
     height: 7%;
     width: 55%;
     margin: 0 1.4em 1em 1.4em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .comments input:first-of-type {
     height: 7%;

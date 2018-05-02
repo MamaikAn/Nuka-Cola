@@ -1,5 +1,6 @@
-    .clude, .h3 {
-        font-size: 1.6vw;
+    .clude .include {
+        font-size: 2vw;
+        line-height: 3vw;
     }
     .exclude {
         flex-shrink: 1;

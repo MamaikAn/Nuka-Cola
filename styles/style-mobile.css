@@ -6,11 +6,28 @@
         margin: 5vw 0;
         font-size: 3.6vw;
     }
+    .exclude {
+        flex-shrink: 1;
+        width: 2vw;
+    }
     .mobile {
         display: block;
     }
     hr.mobile {
         margin: 5vw 0;
+    }
+    .header {
+        font-size: 3vw;
+    }
+    .header .links p{
+        margin-right: 10vw;
+    }
+    .header .ss {
+        margin-right: 3.8vw;
+    }
+    .header img {
+        max-height: 6.5vw;
+        margin: .35vw 4vw .35vw 1vw;
     }
     .header .links{
         display: none;
@@ -28,6 +45,7 @@
     .subscribe {
         display: flex;
         flex-direction: column;
+        margin-top: 3vw;
     }
     .subscribe input {
         height: 2vw;
@@ -138,6 +156,6 @@
     }
     .footer img:nth-last-child(4) {
         margin:0;
-        padding-bottom: 4vw;
+        padding-bottom: 5vw;
         padding-right: 2vw;
     }

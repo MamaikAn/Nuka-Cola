@@ -1,4 +1,4 @@
-    .clude .include p, .clude .include h3, .footer p, .body .footer {
+    .clude .include p, .clude .include h3 {
         font-size: 3.5vw;
         line-height: 4.5vw;
     }
@@ -24,14 +24,14 @@
     }
     .footer img:nth-last-child(1){
         margin:0;
-        padding-bottom: 8.6vw;
+        padding-bottom: 6.6vw;
     }
     .footer img:nth-last-child(2), .footer img:nth-last-child(3) {
         margin:0;
-        padding-bottom: 9vw;
+        padding-bottom: 7vw;
         padding-right: 2vw;
     }
     .footer img:nth-last-child(4) {
         margin:0;
-        padding: 0 2vw 6.5vw 0;
+        padding: 0 2vw 4vw 0;
     }

@@ -1,0 +1,6 @@
+@import url("contacts-desktop.css");
+@import url("contacts-desktop.css");
+@import url("contacts-tablet.css") (max-device-width:1250px);
+@import url("contacts-tablet.css") (max-width:1250px);
+@import url("contacts-mobile.css") (max-device-width: 767px);
+@import url("contacts-mobile.css") (max-width: 767px);

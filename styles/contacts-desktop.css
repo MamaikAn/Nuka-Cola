@@ -29,9 +29,6 @@ h3.h3 {
     text-align:center;
     margin: 1em 0;
 }
-p {
-    text-align: justify;
-}
 /*--- Header ---*/
 .header, .h3{
     background-color: black;
@@ -95,7 +92,7 @@ p {
 }
 /*--- body ---*/
 .slide {
-    margin-top: 3em;
+    margin-top: 5em;
 }
 .slide, .slide1 {
     max-width: 100%;
@@ -105,19 +102,13 @@ p {
     font-family:"georgia", serif;
     font-size: 1.2em;
 }
-.about img {
-    width: 30%;
-    height: 30%;
-    margin: 0 2em 2em 0;
-}
-.about>div {
+.contacts {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
 }
-.about h3{
-    text-align: center;
-    width: 100%;
+.contacts iframe {
+    margin-right: 4em;
 }
 /*--- body-distance ---*/
 .include {

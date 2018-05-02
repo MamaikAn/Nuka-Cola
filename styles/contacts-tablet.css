@@ -31,9 +31,6 @@
         margin: 3vw 0 2vw 0;
         display: block;
     }
-    .about img {
-        margin: 0 2vw 2vw 0;
-    }
     .footer img:nth-last-child(1){
         margin:0;
         padding-top: 4.3vw;

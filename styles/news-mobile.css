@@ -54,14 +54,14 @@
     }
     .comments input, .comments textarea, .comments input:first-child {
         margin-left: 2vw;
-        font-size: 3vw;
+        font-size: 2vw;
     }
-    .comments input, .comments input:first-child {
-        height: 4vw;
+    .comments input, .comments textarea, .comments input:first-child {
+        height: 3vw;
     }
     .comments textarea {
         width: 85.3vw;
-        font-size: 2vw;
+        font-size: 2.4vw;
     }
     .comments input[type="email"] {
         width: 53.7vw;

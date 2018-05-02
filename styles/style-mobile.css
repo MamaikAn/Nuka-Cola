@@ -60,9 +60,6 @@
                              "news2"
                              "news3";
     }
-    .news img {
-        padding: 0 13.5vw;
-    }
     .news h3, .sales h3 {
         text-align: center;
         margin: 2vw 0;

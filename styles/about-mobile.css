@@ -1,6 +1,6 @@
-    .clude .include p, .clude .include h3 {
-        font-size: 3.5vw;
-        line-height: 4.5vw;
+    .clude .include {
+        font-size: 2vw;
+        line-height: 3vw;
     }
     h3.h3 {
         margin: 2vw 0;
@@ -15,9 +15,11 @@
         display: block;
         right: 100%;
     }
-    .include .footer p {
-        font-size: 1.5vw;
-        line-height: 2.5vw;
+    .about>div {
+        flex-direction: column;
+    }
+    .about img {
+        width: 100%;
     }
     .footer img {
         float:none;

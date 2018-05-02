@@ -1,6 +1,6 @@
-    .clude .include p, .clude .include h3 {
-        font-size: 3vw;
-        line-height: 4vw;
+    .clude .include {
+        font-size: 1.8vw;
+        line-height: 2.8vw;
     }
     h3.h3 {
         margin: 2vw 0;
@@ -15,9 +15,19 @@
         display: block;
         right: 100%;
     }
-    .clude .footer p {
-        font-size: 1.3vw;
-        line-height: 2.3vw;
+    .contacts {
+        flex-direction: column;
+    }
+    .contacts p {
+        width: 100%;
+        font-size: 2.19vw;
+    }
+    iframe {
+        margin-right: 0;
+        width: 100%;
+    }
+    .footer p{
+        text-align: justify;
     }
     .footer img {
         float:none;

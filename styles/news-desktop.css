@@ -125,13 +125,13 @@ h3.h3 {
 .comments input, .comments textarea {
     height: 7%;
     width: 55%;
-    margin: 0 1.4em 1em 1.4em;
+    margin: 0 1.4em 1em 1em;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .comments input:first-of-type {
     height: 7%;
     width: 30%;
-    margin: 0 0 1em 1.4em;
+    margin: 0 .2em 1em 1em;
 }
 .comments textarea {
     margin-bottom: .7em;

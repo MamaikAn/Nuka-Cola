@@ -1,6 +1,3 @@
 @import url("news-desktop.css");
-@import url("news-desktop.css");
-@import url("news-tablet.css") (max-device-width:1250px);
 @import url("news-tablet.css") (max-width:1250px);
-@import url("news-mobile.css") (max-device-width: 767px);
 @import url("news-mobile.css") (max-width: 767px);

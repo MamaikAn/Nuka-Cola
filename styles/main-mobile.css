@@ -1,6 +1,9 @@
 .exclude {
     width:2vw;
 }
+.subscribe input {
+    width: 90vw;
+}
 .links img{
     width: 20%;
 }

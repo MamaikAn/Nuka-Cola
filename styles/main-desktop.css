@@ -1,0 +1,28 @@
+.body {
+    width:1250px;
+}
+.slide {
+    border-bottom: 2px solid black;
+}
+.subscribe img{
+    max-height: 2.5em;
+}
+.subscribe input {
+    width: 25em;
+}
+.subscribe button {
+    width: 10em;
+}
+.news img{
+    border: 3px double Saddlebrown;
+}
+.news>h6:last-child {
+    color: black;
+}
+.links img{
+    width: 10%;
+}
+.links a:hover {
+    text-decoration: none;
+    color: #c5c5c5;
+}

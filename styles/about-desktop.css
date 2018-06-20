@@ -1,24 +1,9 @@
-p {
-    text-align: justify;
+body h6 {
+    color: black;
 }
-/*--- body ---*/
+.body {
+    width:1250px;
+}
 .slide {
-    margin-top: 3em;
-}
-.slide, .slide1 {
-    max-width: 100%;
     border-bottom: 2px solid black;
-}
-.about img {
-    width: 30%;
-    height: 30%;
-    margin: 0 2em 2em 0;
-}
-.about>div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.about h3{
-    text-align: center;
 }

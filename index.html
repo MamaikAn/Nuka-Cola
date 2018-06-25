@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark add-theme fixed-top">
         <a class="navbar-brand" href="#">
             <img src="assets/images1.png">
@@ -26,16 +27,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="menu">
-            <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item ml-5">
-                    <a class="nav-link" href="pages/news.html">Новости</a>
-                </li>
-                <li class="nav-item ml-5">
-                    <a class="nav-link" href="pages/about.html">О нас</a>
-                </li>
-                <li class="nav-item ml-5">
-                    <a class="nav-link" href="pages/contacts.html">Контакты</a>
-                </li>
+            <ul id="nav" class="nav navbar-nav mr-auto">
+                <nav-item v-for="ref in refs" v-bind:key="ref.id" v-bind:links="ref"></nav-item>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -58,21 +51,13 @@
             </div>
             <hr />
             <div class="news">
-                <div class="container-fluid">
+                <div id="adv" class="container-fluid">
                     <div class="row">
                         <div class="col-md-4">
                             <img class="mw-100 mb-2" src="assets/adv1.jpg">
                         </div>
                         <div class="col-md">
-                            <h3 class="text-center text-md-left">Самый популярный напиток на всем континенте!</h3>
-                            <p class="text-justify">Популярнейшая на всей территории Америки, Ядер-Кола, так горячо любимая вами, вот уже несколько
-                                сотен лет не перестает радовать и удивлять! Спустя столетия, многие из тех, кто уже дожил
-                                до преклонного возраста, до сих пор помнят свой первый глоток классической Ядер-колы. Этот
-                                вкус невозможно забыть! Да что уж там! Несмотря на наличие ядерных осадков, отсутствие газов
-                                и теплой температуры газировки, ее вкус и качество до сих пор ценится людьми! Это подтверждают
-                                множественные опросы, в которых принимали участие люди всех возрастов. Даже те, кто никогда
-                                не пробовал насладиться этим освежающим, утомительно сладким напитком, попробовав, влюбляются
-                                в нее с первого же глотка! </p>
+                            <advantages :advantage="advantages[0]"></advantages>
                             <h6></h6>
                         </div>
                     </div>
@@ -81,68 +66,28 @@
                             <img class="mw-100 mb-2" src="assets/adv21.jpg">
                         </div>
                         <div class="col-md order-md-1">
-                            <h3 class="text-center text-md-left">Самое большое видовое и вкусовое разнообразие</h3>
-                            <p class="text-justify">Вдвое больше цвета, вдвое больше кофеина и вдвое больше вкуса! Наши сотрудники постоянно усовершенствуют
-                                имеющуюся формулу и смешивают различные вкусовые добавки для получения идеального вкуса.
-                                Мы хотим,чтобы каждый покупатель смог найти свой любимый вкус Ядер-Колы, поэтому представляем
-                                вам огромное видовое разнообразие. Кроме изобретения ваших любимых вкусов, мы так же занимаемся
-                                добавлением ваших любимых алкогольных напитков в нашу колу, что делает ее не только вкусной,
-                                но и в некотором смысле расслабляющей.
-                            </p>
+                            <advantages :advantage="advantages[1]"></advantages>
                         </div>
                     </div>
                 </div>
                 <h6 class="mt-2 text-center">Частое потребление Ядер-Колы может вызвать зависимость или повлечь за собой лучевое облучение.</h6>
             </div>
-            <img class="mw-100 mt-2 slide" src="assets/slide1.jpg">
-            <h3 class="add-theme my-4 text-center py-1 align-middle">Новости</h3>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md">
-                        <img class="mw-100 mb-2" src="assets/newss.jpg">
-                        <h3 class="text-center text-md-left">Новый торговый автомат</h3>
-                        <p class="text-justify">Представляем вашему вниманию наш новый торговый автомат с холодильником! Теперь Ядер-Кола будет всегда
-                            встречать вас своим леденящим объятием. Скоро во всех штатах.</p>
-                    </div>
-                    <div class="col-md">
-                        <img class="mw-100 mb-2" src="assets/news22.jpg">
-                        <h3 class="text-center text-md-left">Крышко-мина!</h3>
-                        <p class="text-justify">Вы не можете разделять понятия ядерного оружия и Ядер-Колы? Теперь и не нужно! Представляем вам нашу
-                            новейшую разработку: Крышко-мину! Ба-бах! Теперь, когда ваш враг наступит на эту мину, ему не
-                            только оторвет ногу, но и покроет его труп горой крышек! Что может быть лучше, чем смерть врага?
-                            Конечно, его смерть и ваше богатство!
-                        </p>
-                    </div>
-                    <div class="col-md">
-                        <img class="mw-100 mb-2" src="assets/news33.jpg">
-                        <h3 class="text-center text-md-left">Теперь на 50% меньше радиации!</h3>
-                        <p class="text-justify">Наша новейшая формула позволит вам пить Ядер-Колу и не умирать от лучевой болезни... Ну, или чуть
-                            дольше не умирать.</p>
+            <div id="news-sales">
+                <img class="mw-100 mt-2 slide" src="assets/slide1.jpg">
+                <heading :head="heads[0]"></heading>
+                <div class="container-fluid">
+                    <div class="row">
+                        <news-sale-col v-for="news in newses" v-bind:key="news.id" v-bind:post="news"></news-sale-col>
                     </div>
                 </div>
-            </div>
-            <h3 class="add-theme my-4 text-center py-1 align-middle">Акции</h3>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md">
-                        <img class="mw-100 mb-2" src="assets/sale1.jpg">
-                        <h3 class="text-center text-md-left">Вы жаждете приключений и много крышек?</h3>
-                        <p class="text-justify">Мы рады сообщить об открытии нового парка развлечений Nuka-World! Вас ждут незабываемые эмоции, море
-                            развлечений и несметные богатства! А так же ваши любимые напарники - Bottle и Cappy! Кроме того,
-                            приобретая билеты до 1 января, у вас есть уникальная возможность купить два билета по цене одного!
-                            Разве это не подарок?</p>
-                    </div>
-                    <div class="col-md">
-                        <img class="mw-100 mb-2" src="assets/sale2.jpg">
-                        <h3 class="text-center text-md-left">Примерьте силовую броню на себе уже сегодня!</h3>
-                        <p class="text-justify">Вам не хватает острых ощущениях? Вы всегда мечтали попробовать на себе роль солдата в центре боевых
-                            действий? Приезжайте в парк развлечений Nuka-World и опробуйте на себе роль тематического солдата
-                            всего за 9.99$/мин! Настоящая силовая броня T-51! Что может быть круче, чем фотографии вас в
-                            силовой броне? Ваши друзья вас и не узнают!</p>
+                <heading :head="heads[1]"></heading>
+                <div id="sale-row" class="container-fluid">
+                    <div class="row">
+                        <news-sale-col v-for="sale in sales" v-bind:key="sales.id" v-bind:post="sale"></news-sale-col>
                     </div>
                 </div>
+                <heading :head="heads[2]"></heading>
             </div>
-            <h3 class="add-theme my-4 text-center py-1 align-middle">Мы на связи</h3>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md mb-4 mb-md-0">
@@ -152,34 +97,8 @@
                                 <h3 class="mt-3">Связь в социальных сетях</h3>
                             </div>
                             <div class="container-fluid links">
-                                <div class="row no-gutters">
-                                    <div class="col mb-4">
-                                        <a href="https://vk.com/mamaikan">
-                                            <img src="assets/vk.png">
-                                            <span class="ml-2 align-middle">Мы в Вконтакте</span>
-                                        </a>
-                                    </div>
-                                    <div class="d-none d-md-block w-100"></div>
-                                    <div class="col mb-4">
-                                        <a href="https://twitter.com/Mamaik_An">
-                                            <img src="assets/twitter.png">
-                                            <span class="ml-2 align-middle">Мы в Twitter</span>
-                                        </a>
-                                    </div>
-                                    <div class="w-100"></div>
-                                    <div class="col mb-4">
-                                        <a href="">
-                                            <img src="assets/playstation.png">
-                                            <span class="ml-2 align-middle">Мы в Playstation Network</span>
-                                        </a>
-                                    </div>
-                                    <div class="d-none d-md-block w-100"></div>
-                                    <div class="col mb-4">
-                                        <a href="https://steamcommunity.com/id/MamaikAn">
-                                            <img src="assets/steam.png">
-                                            <span class="ml-2 align-middle">Мы в Steam</span>
-                                        </a>
-                                    </div>
+                                <div id="contacts" class="row no-gutters">
+                                    <contact v-for="ref in refs" :key="ref.id" :links="ref"></contact>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +109,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer">
+            <div id="footer" class="footer">
                 <hr/>
                 <img class="w-25 float-md-left" src="assets/bethesda-studios-icon-black.svg">
                 <img class="my-md-4 mx-3 w-25 float-md-left" src="assets/bethesda-icon-black.svg">
@@ -198,11 +117,7 @@
                     находящиеся на сайте были найдены в сети Интернет и имеют за собой право на свободное распространение.
                     Владельцами всех торговых марок и знаков являются Zenimax и Bethesda.</span>
                 <hr />
-                <img class="mr-3" src="assets/esrb.gif">
-                <img class="mr-3" src="assets/pegi-18.svg">
-                <img class="mr-3" src="assets/xbox-one-icon-black.svg">
-                <img class="mr-3" src="assets/ps4-icon-black.svg">
-                <img class="mr-3" src="assets/pc-icon-black.svg">
+                <img-footer v-for="src in srcs" :key="src.id" :img="src"></img-footer>
             </div>
         </div>
         <div class="flex-shrink-1-xl exclude"></div>
@@ -215,7 +130,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script> 
-    </body>
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="scripts/vue.js"></script>
+</body>
 
 </html>

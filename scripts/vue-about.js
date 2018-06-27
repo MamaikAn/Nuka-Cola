@@ -1,15 +1,3 @@
-Vue.component('NavItem', {
-    props: ['links'],
-    template: '<li class="nav-item ml-5">\
-    <a class="nav-link" :href="links.url">{{links.text}}</a>\
-</li>'
-})
-
-Vue.component('img-footer', {
-    props: ['img'],
-    template: '<img class="mr-3" :src="img.url">'
-})
-
 Vue.component('block-about', {
     props: ['prop'],
     template: '\
@@ -205,7 +193,7 @@ new Vue({
             {
                 id: 5, pic: '../assets/robobrain.jpg', title: 'Робомозг',
 
-                bodyUp: '>Это наш мозг, правда роботизированный... и слегка маринованный. Но это не мешает ему вести основную\
+                bodyUp: 'Это наш мозг, правда роботизированный... и слегка маринованный. Но это не мешает ему вести основную\
             мозговую деятельность на нашем производстве Lorem ipsum dolor sit amet, consectetur adipiscing\
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis\
             enim lobortis scelerisque.',
@@ -217,30 +205,6 @@ new Vue({
             malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.\
             Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus\
             et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.'}
-        ]
-    }
-})
-
-new Vue({
-    el: '#footer',
-    data: {
-        srcs: [
-            { id: 1, url: '../assets/esrb.gif' },
-            { id: 2, url: '../assets/pegi-18.svg' },
-            { id: 3, url: '../assets/xbox-one-icon-black.svg' },
-            { id: 4, url: '../assets/ps4-icon-black.svg' },
-            { id: 5, url: '../assets/pc-icon-black.svg' }
-        ]
-    }
-})
-
-new Vue({
-    el: "#nav",
-    data: {
-        refs: [
-            { id: 1, url: '../pages/news.html', text: 'Новости' },
-            { id: 2, url: '../pages/about.html', text: 'О нас' },
-            { id: 3, url: '../pages/contacts.html', text: 'Контакты' }
         ]
     }
 })

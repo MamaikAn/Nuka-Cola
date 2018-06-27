@@ -16,25 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark add-theme fixed-top">
-        <a class="navbar-brand" href="../index.html">
-            <img src="../assets/images1.png">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menu">
-            <ul id="nav" class="nav navbar-nav mr-auto">
-                <nav-item v-for="ref in refs" v-bind:key="ref.id" v-bind:links="ref"></nav-item>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link ml-5" href="#">Силовая броня</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        <nav-bar id="nav" :logo="logo" :refs="refs" :armor="armor"></nav-bar>
 
     <img class="mw-100 slide" src="../assets/aboutsl.jpg">
     <div class="d-flex flex-row justify-content-center">
@@ -51,15 +33,8 @@
                     <block-about v-for="worker in workers" :key="worker.id" :prop="worker"></block-about>
                 </div>
             </div>
-            <div id="footer" class="footer">
-                <hr/>
-                <img class="w-25 float-md-left" src="../assets/bethesda-studios-icon-black.svg">
-                <img class="my-md-4 mx-3 w-25 float-md-left" src="../assets/bethesda-icon-black.svg">
-                <p class="text-justify">Данный сайт является лабораторной работой и не используется с целью получения выгоды. Все графические изображения,
-                    находящиеся на сайте были найдены в сети Интернет и имеют за собой право на свободное распространение.
-                    Владельцами всех торговых марок и знаков являются Zenimax и Bethesda.</p>
-                <hr />
-                <img-footer v-for="src in srcs" :key="src.id" :img="src"></img-footer>
+            <div id="footer" class="footer">  
+                    <brand-footer :brand="brand" :labels="labels"></brand-footer>
             </div>
         </div>
         <div class="flex-shrink-1-xl exclude"></div>
@@ -73,6 +48,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="../scripts/vue-about.js"></script>
+    <script src="../scripts/vue-nav-footer.js"></script>
 </body>
 
 </html>

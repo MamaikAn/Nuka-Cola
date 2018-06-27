@@ -13,10 +13,10 @@
 .subscribe button {
     width: 10em;
 }
-.news img{
+.adv img{
     border: 3px double Saddlebrown;
 }
-.news>h6:last-child {
+.adv>h6:last-child {
     color: black;
 }
 .links img{

@@ -1,0 +1,65 @@
+    .clude .include {
+        font-size: 3vw;
+        line-height: 4vw;
+    }
+    h3.h3 {
+        margin: 5vw 0;
+        font-size: 3.6vw;
+    }
+    .exclude {
+        flex-shrink: 1;
+        width: 2vw;
+    }
+    .header {
+        font-size: 3vw;
+    }
+    .header .links p{
+        margin-right: 10vw;
+    }
+    .header .ss {
+        margin-right: 3.8vw;
+    }
+    .header img {
+        max-height: 6.5vw;
+        margin: .35vw 4vw .35vw 1vw;
+    }
+    .header .links{
+        display: none;
+    }
+    .header .ss p {
+        display: none;
+    }
+    .slide {
+        margin: 0;
+    }
+    .header .ss div.nav {
+        display: block;
+        right: 100%;
+    }
+    .about>div {
+        flex-direction: column;
+    }
+    .about img {
+        width: 100%;
+        margin:0;
+    }
+    .footer img {
+        float:none;
+    }
+    .footer img:nth-child(3) {
+        margin: 0;
+        margin-bottom: 1.2vw;
+    }
+    .footer img:nth-last-child(1){
+        margin:0;
+        padding-bottom: 8.2vw;
+    }
+    .footer img:nth-last-child(2), .footer img:nth-last-child(3) {
+        margin:0;
+        padding-bottom: 9vw;
+        padding-right: 2vw;
+    }
+    .footer img:nth-last-child(4) {
+        margin:0;
+        padding: 0 2vw 4vw 0;
+    }

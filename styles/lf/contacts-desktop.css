@@ -1,0 +1,16 @@
+/*--- body ---*/
+.slide {
+    margin-top: 5em;
+}
+.slide, .slide1 {
+    max-width: 100%;
+    border-bottom: 2px solid black;
+}
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.contacts iframe {
+    margin-right: 4em;
+}

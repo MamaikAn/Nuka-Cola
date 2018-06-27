@@ -25,16 +25,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="menu">
-            <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item ml-5">
-                    <a class="nav-link" href="news.html">Новости</a>
-                </li>
-                <li class="nav-item ml-5 active">
-                    <a class="nav-link" href="#">О нас</a>
-                </li>
-                <li class="nav-item ml-5">
-                    <a class="nav-link" href="contacts.html">Контакты</a>
-                </li>
+            <ul id="nav" class="nav navbar-nav mr-auto">
+                <nav-item v-for="ref in refs" v-bind:key="ref.id" v-bind:links="ref"></nav-item>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -48,239 +40,18 @@
     <div class="d-flex flex-row justify-content-center">
         <div class="flex-shrink-1-xl exclude"></div>
         <div class="body flex-shrink-0-xl">
-            <h3 class="add-theme my-4 text-center py-1 align-middle"> Сорта Ядер-Колы</h3>
-            <div class="container-fluid">
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <img class="w-100" src="../assets/sorts/quantum.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center my-3">Квантовая Ядер-Кола</h3>
-                        <p class="text-justify">Наша лучшая формула! Содержит в себе сразу 18 фруктовых вкусов! Такого вы не пробовали еще нигде!
-                            Вдвое больше цвета, вдвое больше кофеина и вдвое больше вкуса! Вы заметите ее даже издалека благодаря
-                            ее светящимся свойствам.</p>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum. Felis bibendum ut tristique et egestas
-                            quis. Viverra adipiscing at in tellus integer. Et tortor consequat id porta. Nec sagittis aliquam
-                            malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.
-                            Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus
-                            et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.</p>
-                        <h6 class="text-center mt-4">Возможно присутствие голубоватого свечения в моче после приема из-за входящего в состав напитка изотопа
-                            стронция.
-                        </h6>
-                    </div>
+            <div id="all">
+                <h3 class="add-theme my-4 text-center py-1 align-middle"> Сорта Ядер-Колы</h3>
+                <div class="container-fluid">
+                    <block-about v-for="cola in colas" :key="cola.id" :prop="cola"></block-about>
                 </div>
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <img class="w-100" class="mw-100" src="../assets/sorts/victory.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center my-3">Ядер-Кола Виктория</h3>
-                        <p class="text-justify">Необычный вкус, необычный цвет... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis
-                            scelerisque. Maecenas ultricies mi eget mauris pharetra. Lectus proin nibh nisl condimentum.</p>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum. Felis bibendum ut tristique et egestas
-                            quis. Viverra adipiscing at in tellus integer. Et tortor consequat id porta. Nec sagittis aliquam
-                            malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.
-                            Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus
-                            et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.</p>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <img class="w-100" src="../assets/sorts/quartz.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center my-3">Кварцевая Ядер-Кола</h3>
-                        <p class="text-justify">Прозрачный напиток с белым оттенком. С помощью Кварцевой Ядер Колы вы сможете видеть даже в темноте.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies
-                            mi eget mauris pharetra.
-                        </p>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum. Felis bibendum ut tristique et egestas
-                            quis. Viverra adipiscing at in tellus integer. Et tortor consequat id porta. Nec sagittis aliquam
-                            malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.
-                            Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus
-                            et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.</p>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <img class="w-100" src="../assets/sorts/cherry.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center my-3">Вишневая Ядер-Кола</h3>
-                        <p class="text-justify">Ядер-Кола со вкусом вишни... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque.
-                            Maecenas ultricies mi eget mauris pharetra. Lectus proin nibh nisl condimentum.</p>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum. Felis bibendum ut tristique et egestas
-                            quis. Viverra adipiscing at in tellus integer. Et tortor consequat id porta. Nec sagittis aliquam
-                            malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.
-                            Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus
-                            et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.</p>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <img class="w-100" src="../assets/sorts/grape.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center my-3">Ядер-Кола со вкусом винограда</h3>
-                        <p class="text-justify">Необычный вкус, необычный цвет... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis
-                            scelerisque. Maecenas ultricies mi eget mauris pharetra. Lectus proin nibh nisl condimentum.</p>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum. Felis bibendum ut tristique et egestas
-                            quis. Viverra adipiscing at in tellus integer. Et tortor consequat id porta. Nec sagittis aliquam
-                            malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.
-                            Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus
-                            et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.</p>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <img class="w-100" src="../assets/sorts/orange.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center my-3">Ядер-Кола со вкусом апельсина</h3>
-                        <p class="text-justify">Необычный вкус, необычный цвет... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis
-                            scelerisque. Maecenas ultricies mi eget mauris pharetra. Lectus proin nibh nisl condimentum.</p>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum. Felis bibendum ut tristique et egestas
-                            quis. Viverra adipiscing at in tellus integer. Et tortor consequat id porta. Nec sagittis aliquam
-                            malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.
-                            Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus
-                            et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.</p>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <img class="w-100" src="../assets/sorts/wild.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center my-3">Дикая Ядер-Кола</h3>
-                        <p class="text-justify">Ядер-Кола с вашим любимым ромом... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis
-                            scelerisque. Maecenas ultricies mi eget mauris pharetra. Lectus proin nibh nisl condimentum.</p>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum. Felis bibendum ut tristique et egestas
-                            quis. Viverra adipiscing at in tellus integer. Et tortor consequat id porta. Nec sagittis aliquam
-                            malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.
-                            Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus
-                            et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.</p>
-                    </div>
+                <img class="mw-100 slide" src="../assets/workers.png">
+                <h3 class="add-theme my-4 text-center py-1 align-middle">Наши сотрудники</h3>
+                <div class="container-fluid">
+                    <block-about v-for="worker in workers" :key="worker.id" :prop="worker"></block-about>
                 </div>
             </div>
-            <img class="mw-100 slide" src="../assets/workers.png">
-            <h3 class="add-theme my-4 text-center py-1 align-middle">Наши сотрудники</h3>
-            <div class="container-fluid">
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <img class="w-100" src="../assets/mr.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center my-3">Мистер-Храбрец</h3>
-                        <p class="text-justify">Наш надеждый защитник и сортировщик.... Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis
-                            scelerisque. Maecenas ultricies mi eget mauris pharetra.</p>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum. Felis bibendum ut tristique et egestas
-                            quis. Viverra adipiscing at in tellus integer. Et tortor consequat id porta. Nec sagittis aliquam
-                            malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.
-                            Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus
-                            et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.</p>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <img class="w-100" src="../assets/protectron.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center my-3">Протектрон</h3>
-                        <p class="text-justify">Несмотря на то, что его главная цель - защита, он так же отлично заменяет человека во всем... Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum.</p>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum. Felis bibendum ut tristique et egestas
-                            quis. Viverra adipiscing at in tellus integer. Et tortor consequat id porta. Nec sagittis aliquam
-                            malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.
-                            Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus
-                            et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.</p>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <img class="w-100" src="../assets/bottly.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center my-3">Bottly</h3>
-                        <p class="text-justify">Одно из главных лиц Nuka World. Его олицетворение. Неподалеку должен быть Cappy... Lorem ipsum dolor
-                            sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi eget mauris pharetra.
-                            Lectus proin nibh nisl condimentum.</p>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum. Felis bibendum ut tristique et egestas
-                            quis. Viverra adipiscing at in tellus integer. Et tortor consequat id porta. Nec sagittis aliquam
-                            malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.
-                            Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus
-                            et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.</p>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <img class="w-100" src="../assets/Cappy.png">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center my-3">Cappy</h3>
-                        <p class="text-justify">Второе главное лицо Nuka World. Говорят, что встреча с ним ведет к богатству... Lorem ipsum dolor
-                            sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi eget mauris pharetra.
-                        </p>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum. Felis bibendum ut tristique et egestas
-                            quis. Viverra adipiscing at in tellus integer. Et tortor consequat id porta. Nec sagittis aliquam
-                            malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.
-                            Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus
-                            et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.</p>
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <img class="w-100" src="../assets/robobrain.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center my-3">Робомозг</h3>
-                        <p class="text-justify">Это наш мозг, правда роботизированный... и слегка маринованный. Но это не мешает ему вести основную
-                            мозговую деятельность на нашем производстве Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis
-                            enim lobortis scelerisque.</p>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque. Maecenas ultricies mi
-                            eget mauris pharetra. Lectus proin nibh nisl condimentum. Felis bibendum ut tristique et egestas
-                            quis. Viverra adipiscing at in tellus integer. Et tortor consequat id porta. Nec sagittis aliquam
-                            malesuada bibendum arcu vitae elementum. Tellus in hac habitasse platea dictumst vestibulum.
-                            Feugiat nisl pretium fusce id velit. Adipiscing elit pellentesque habitant morbi tristique senectus
-                            et netus. Interdum posuere lorem ipsum dolor sit. Eget est lorem ipsum dolor sit.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer">
+            <div id="footer" class="footer">
                 <hr/>
                 <img class="w-25 float-md-left" src="../assets/bethesda-studios-icon-black.svg">
                 <img class="my-md-4 mx-3 w-25 float-md-left" src="../assets/bethesda-icon-black.svg">
@@ -288,11 +59,7 @@
                     находящиеся на сайте были найдены в сети Интернет и имеют за собой право на свободное распространение.
                     Владельцами всех торговых марок и знаков являются Zenimax и Bethesda.</p>
                 <hr />
-                <img class="mr-3" src="../assets/esrb.gif">
-                <img class="mr-3" src="../assets/pegi-18.svg">
-                <img class="mr-3" src="../assets/xbox-one-icon-black.svg">
-                <img class="mr-3" src="../assets/ps4-icon-black.svg">
-                <img class="mr-3" src="../assets/pc-icon-black.svg">
+                <img-footer v-for="src in srcs" :key="src.id" :img="src"></img-footer>
             </div>
         </div>
         <div class="flex-shrink-1-xl exclude"></div>
@@ -304,6 +71,8 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../scripts/vue-about.js"></script>
 </body>
 
 </html>

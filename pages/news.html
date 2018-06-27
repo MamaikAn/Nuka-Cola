@@ -25,16 +25,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="menu">
-            <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item ml-5 active">
-                    <a class="nav-link" href="#">Новости</a>
-                </li>
-                <li class="nav-item ml-5">
-                    <a class="nav-link" href="about.html">О нас</a>
-                </li>
-                <li class="nav-item ml-5">
-                    <a class="nav-link" href="contacts.html">Контакты</a>
-                </li>
+            <ul id="nav" class="nav navbar-nav mr-auto">
+                <nav-item v-for="ref in refs" v-bind:key="ref.id" v-bind:links="ref"></nav-item>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -48,321 +40,31 @@
     <div class="d-flex flex-row justify-content-center">
         <div class="flex-shrink-1-xl exclude"></div>
         <div class="body flex-shrink-0-xl">
-            <h3 class="add-theme my-4 text-center py-1 align-middle">Новый торговый автомат</h3>
-            <div class="container-fluid news">
-                <div class="row mb-xl-3 mb-0">
-                    <div class="col-md-7">
-                        <img class="mw-100 mb-2 mb-md-0" src="../assets/newss.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center">by Admin 01.05.2018 13:36</h3>
-                        <p class="text-justify">Всем известно, что нет на планете такого человека, которому бы нравился вкус теплой разгазированной
-                            Ядер-Колы. Мы просто не могли оставаться в стороне и наконец нашли решение данной проблемы. Представляем
-                            вашему вниманию наш новый торговый автомат с холодильником! Вам больше не нужно держать Ядер-Колу
-                            в холодильнике, в ожидании ее охлаждения. Теперь Ядер-Кола будет всегда встречать вас своим леденящим
-                            объятием уже в момент покупки!
-                            <br /> Но и это еще не все. Новый дизайн? Да, вы совершенно верно заметили. Наши новые торговые автоматы
-                            претерпели редизайн и очень сильно видоизменились. Но дело не только в красоте: таким образом,
-                            мы хотим, что бы вы сразу могли понять, в каком аппарате есть встроенный холодильник. Мы честны
-                            перед нашими покупателями и не будем скрывать наличие или отсутствие холодильника. Мы стараемся
-                            над тем, чтобы предоставлять вам только лучшие продукты и сервис. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Aliquam ac mollis sem. Mauris sit amet ipsum malesuada, molestie
-                            ante at, commodo tortor. Donec a libero ut nunc imperdiet auctor. Etiam malesuada ultrices ipsum,
-                            a efficitur ex porttitor id. Nullam sem nibh, consectetur et fermentum eu, suscipit quis metus.
-                            Aenean eget lacinia risus. Suspendisse tempus lectus at augue ultrices, a molestie diam vehicula.</p>
-                    </div>
-                </div>
-                <div class="row text-justify">
-                    <div class="col-md order-xl-2 order-2 order-md-1">
-                        <div class="my-xl-2 mb-5 mt-3">
-                            <img class="float-left align-middle mr-2 pt-2" src="../assets/avatar.png">
-                            <span>Очень интересная статья! Спасибо! Устал носить с собой домой Ядер-Колу, чтобы охладить.</span>
-                        </div>
-                        <div class="mb-2 pt-lg-3 pt-3 pt-md-0 pt-xl-0">
-                            <img class="float-left align-middle mr-2 pt-2" src="../assets/avatar.png">
-                            <span>Согласен с предыдущим комментатором. Очень рад, что Ядер-Кола прислушивается к к нам.</span>
-                        </div>
-                        <form class="mt-5 mt-xl-0 pt-3 pt-xl-0">
-                            <div class="form-row">
-                                <div class="col-lg form-group">
-                                    <label for="inputName" class="d-lg-none d-block">Ваше имя</label>
-                                    <input class="form-control form-control-sm" type="text" id="inputName" placeholder="Ваше Имя">
-                                </div>
-                                <div class="col-lg form-group">
-                                    <label for="inputEmail" class="d-lg-none d-block">Ваш Email</label>
-                                    <input class="form-control form-control-sm" type="email" id="inputEmail" placeholder="Ваш Email">
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col">
-                                    <label for="inputText" class="d-lg-none d-block">Ваше сообщение</label>
-                                    <textarea class="form-control form-control-sm" id="inputText" placeholder="Ваше сообщение"></textarea>
-                                </div>
-                            </div>
-                            <div class="row form-group text-center">
-                                <div class="col">
-                                    <input class="btn btn-primary" type="submit" value="Отправить">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-xl-8 col-md-5 order-xl-1 order-1 order-md-2">
-                        <p>Donec eget tristique dolor adipiscing elit. Aliquam ac mollis sem. Cras at nunc et ligula lacinia
-                            convallis. Suspendisse euismod dui eget eros lobortis aliquam. Sed vitae orci sit amet tellus
-                            auctor finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-                            himenaeos.Vivamus augue sem, ullamcorper at dui id, suscipit luctus justo. Cras vitae commodo
-                            sapien. Nulla eu malesuada quam. Duis ac malesuada tortor. Pellentesque vel velit augue. Ut non
-                            elit in urna convallis pellentesque. Sed non nibh non est sagittis luctus nec non felis. Donec
-                            consectetur ante a porttitor dictum. Class aptent taciti sociosqu ad litora torquent per conubia
-                            nostra, per inceptos himenaeos. Integer nec lacus in orci feugiat accumsan. Vestibulum quis varius
-                            turpis, sed euismod erat.
-                            <br />Скоро во всех штатах нашей страны. P.S. Наличие аппаратов в Убежищах не предусмотрено и не гарантируется.
-                            О возможности установки или смены аппарата на новый, узнавайте у местных подразделений Ядер-Колы.
-                        </p>
-                    </div>
-                </div>
+            <div id="news">
+                <news-block v-for="news in newses" :key="news.id" :news="news" :url="url"></news-block>
             </div>
-            <h3 class="add-theme my-4 text-center py-1 align-middle">Крышко-мина!</h3>
-            <div class="container-fluid news">
-                <div class="row mb-xl-3 mb-0">
-                    <div class="col-md-7">
-                        <img class="mw-100 mb-2 mb-md-0" src="../assets/news22.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center">by Admin 30.04.2018 18:28</h3>
-                        <p class="text-justify">Вы не можете разделять понятия ядерного оружия и Ядер-Колы? Теперь и не нужно! Представляем вам нашу
-                            новейшую разработку: Крышко-мину! Ба-бах! Теперь, когда ваш враг наступит на эту мину, ему не
-                            только оторвет ногу, но и покроет его труп горой крышек! Что может быть лучше, чем смерть врага?
-                            Конечно, его смерть и ваше богатство!
-                            <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac mollis sem. Mauris sit amet
-                            ipsum malesuada, molestie ante at, commodo tortor. Donec a libero ut nunc imperdiet auctor. Etiam
-                            malesuada ultrices ipsum, a efficitur ex porttitor id. Nullam sem nibh, consectetur et fermentum
-                            eu, suscipit quis metus. Aenean eget lacinia risus. Suspendisse tempus lectus at augue ultrices,
-                            a molestie diam vehicula. Donec eget tristique. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Aliquam ac mollis sem. Mauris sit amet ipsum malesuada, molestie ante at, commodo tortor.
-                            Donec a libero ut nunc imperdiet auctor. Etiam malesuada ultrices ipsum, a efficitur ex porttitor
-                            id. Nullam sem nibh, consectetur et fermentum eu, suscipit quis metus. Aenean eget lacinia risus.
-                            Suspendisse tempus lectus at augue ultrices, a molestie diam vehicula. Donec eget tristique </p>
-                    </div>
+            <div id="footer" class="footer">
+                    <hr/>
+                    <img class="w-25 float-md-left" src="../assets/bethesda-studios-icon-black.svg">
+                    <img class="my-md-4 mx-3 w-25 float-md-left" src="../assets/bethesda-icon-black.svg">
+                    <span class="text-justify">Данный сайт является лабораторной работой и не используется с целью получения выгоды. Все графические изображения,
+                        находящиеся на сайте были найдены в сети Интернет и имеют за собой право на свободное распространение.
+                        Владельцами всех торговых марок и знаков являются Zenimax и Bethesda.</span>
+                    <hr />
+                    <img-footer v-for="src in srcs" :key="src.id" :img="src"></img-footer>
                 </div>
-                <div class="row text-justify">
-                    <div class="col-md order-xl-2 order-2 order-md-1">
-                        <div class="my-xl-2 mb-5 mt-3">
-                            <img class="float-left align-middle mr-2 pt-2" src="../assets/avatar.png">
-                            <span>Супер-класс! Обожаю оружие. У меня уже есть идеи, куда это можно применить...</span>
-                        </div>
-                        <div class="mb-4 pt-lg-3 pt-3 pt-md-0 pt-xl-3">
-                            <img class="float-left align-middle mr-2 pt-2" src="../assets/avatar.png">
-                            <span>Не уверен, что это поспособствует миру во всем мире. Но выживать же как-то нужно. </span>
-                        </div>
-                        <form class="mt-5 mt-xl-0 pt-3 pt-xl-1">
-                            <div class="form-row">
-                                <div class="col-lg form-group">
-                                    <label for="inputName" class="d-lg-none d-block">Ваше имя</label>
-                                    <input class="form-control form-control-sm" type="text" id="inputName" placeholder="Ваше Имя">
-                                </div>
-                                <div class="col-lg form-group">
-                                    <label for="inputEmail" class="d-lg-none d-block">Ваш Email</label>
-                                    <input class="form-control form-control-sm" type="email" id="inputEmail" placeholder="Ваш Email">
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col">
-                                    <label for="inputText" class="d-lg-none d-block">Ваше сообщение</label>
-                                    <textarea class="form-control form-control-sm" id="inputText" placeholder="Ваше сообщение"></textarea>
-                                </div>
-                            </div>
-                            <div class="row form-group text-center">
-                                <div class="col">
-                                    <input class="btn btn-primary" type="submit" value="Отправить">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-xl-8 col-md-5 order-xl-1 order-1 order-md-2">
-                        <p>dolor adipiscing elit. Aliquam ac mollis sem. Cras at nunc et ligula lacinia convallis. Suspendisse
-                            euismod dui eget eros lobortis aliquam. Sed vitae orci sit amet tellus auctor finibus. Class
-                            aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Vivamus
-                            augue sem, ullamcorper at dui id, suscipit luctus justo. Cras vitae commodo sapien. Nulla eu
-                            malesuada quam. Duis ac malesuada tortor. Pellentesque vel velit augue. Ut non elit in urna convallis
-                            pellentesque. Sed non nibh non est sagittis luctus nec non felis. Donec consectetur ante a porttitor
-                            dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                            Integer nec lacus in orci feugiat accumsan. Vestibulum quis varius turpis, sed euismod erat.
-                            <br />Скоро во всех штатах нашей страны. P.S. Наличие мин в Убежищах не предусмотрено и не гарантируется.
-                            О возможности доставки или покупки оптом, узнавайте у местных подразделений Ядер-Колы.</p>
-                    </div>
-                </div>
-            </div>
-            <h3 class="add-theme my-4 text-center py-1 align-middle">Теперь на 50% меньше радиации!</h3>
-            <div class="container-fluid news">
-                <div class="row mb-xl-3 mb-0">
-                    <div class="col-md-7">
-                        <img class="mw-100 mb-2 mb-md-0" src="../assets/news33.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center">by Admin 10.04.2018 09:07</h3>
-                        <p class="text-justify">Наша новейшая формула позволит вам пить Ядер-Колу и не умирать от лучевой болезни... Ну, или чуть
-                            дольше не умирать.
-                            <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac mollis sem. Mauris sit amet
-                            ipsum malesuada, molestie ante at, commodo tortor. Donec a libero ut nunc imperdiet auctor. Etiam
-                            malesuada ultrices ipsum, a efficitur ex porttitor id. Nullam sem nibh, consectetur et fermentum
-                            eu, suscipit quis metus. Aenean eget lacinia risus. Suspendisse tempus lectus at augue ultrices,
-                            a molestie diam vehicula. Donec eget tristique. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Aliquam ac mollis sem. Mauris sit amet ipsum malesuada, molestie ante at, commodo tortor.
-                            Donec a libero ut nunc imperdiet auctor. Etiam malesuada ultrices ipsum, a efficitur ex porttitor
-                            id. Nullam sem nibh, consectetur et fermentum eu, suscipit quis metus. Aenean eget lacinia risus.
-                            Suspendisse tempus lectus at augue ultrices, a molestie diam vehicula. Donec eget tristique </p>
-                    </div>
-                </div>
-                <div class="row text-justify">
-                    <div class="col-md order-xl-2 order-2 order-md-1">
-                        <div class="my-xl-2 mb-5 mt-3">
-                            <img class="float-left align-middle mr-2 pt-2" src="../assets/avatar.png">
-                            <span>У меня так брат умер. С тех пор не пью вашу Ядер-Колу. Но наверное сейчас можно попробовать..</span>
-                        </div>
-                        <div class="mb-2 pt-lg-3 pt-3 pt-md-0 pt-xl-0">
-                            <img class="float-left align-middle mr-2 pt-2" src="../assets/avatar.png">
-                            <span>Погодите. А она радиоактивна? Теперь стало понятно, откуда у меня выросла из живота третья рука</span>
-                        </div>
-                        <form class="mt-5 mt-xl-0 pt-3 pt-xl-0">
-                            <div class="form-row">
-                                <div class="col-lg form-group">
-                                    <label for="inputName" class="d-lg-none d-block">Ваше имя</label>
-                                    <input class="form-control form-control-sm" type="text" id="inputName" placeholder="Ваше Имя">
-                                </div>
-                                <div class="col-lg form-group">
-                                    <label for="inputEmail" class="d-lg-none d-block">Ваш Email</label>
-                                    <input class="form-control form-control-sm" type="email" id="inputEmail" placeholder="Ваш Email">
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col">
-                                    <label for="inputText" class="d-lg-none d-block">Ваше сообщение</label>
-                                    <textarea class="form-control form-control-sm" id="inputText" placeholder="Ваше сообщение"></textarea>
-                                </div>
-                            </div>
-                            <div class="row form-group text-center">
-                                <div class="col">
-                                    <input class="btn btn-primary" type="submit" value="Отправить">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-xl-8 col-md-5 order-xl-1 order-1 order-md-2">
-                        <p>dolor adipiscing elit. Aliquam ac mollis sem. Cras at nunc et ligula lacinia convallis. Suspendisse
-                            euismod dui eget eros lobortis aliquam. Sed vitae orci sit amet tellus auctor finibus. Class
-                            aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Vivamus
-                            augue sem, ullamcorper at dui id, suscipit luctus justo. Cras vitae commodo sapien. Nulla eu
-                            malesuada quam. Duis ac malesuada tortor. Pellentesque vel velit augue. Ut non elit in urna convallis
-                            pellentesque. Sed non nibh non est sagittis luctus nec non felis. Donec consectetur ante a porttitor
-                            dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                            Integer nec lacus in orci feugiat accumsan. Vestibulum quis varius turpis, sed euismod erat.
-                            <br />Скоро во всех штатах нашей страны. P.S. Наличие Ядер-Колы в Убежищах не предусмотрено и не гарантируется.
-                            О возможности доставки или покупки оптом, узнавайте у местных подразделений Ядер-Колы.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <h3 class="add-theme my-4 text-center py-1 align-middle">Фирменные футболки!</h3>
-            <div class="container-fluid news">
-                <div class="row mb-xl-3 mb-0">
-                    <div class="col-md-7">
-                        <img class="mw-100 mb-2 mb-md-0" src="../assets/news4.jpg">
-                    </div>
-                    <div class="col-md">
-                        <h3 class="text-center">by Admin 02.04.2018 21:57</h3>
-                        <p class="text-justify">Мы рады сообщить вам о поступлении на продажу наших фирменных футболок. Хочешь, чтобы все знали о
-                            твоей любви к Ядер-Коле? Достаточно просто показаться на людях в этой футболке, чтобы люди смогли
-                            понять, что вы истинный фанат Ядер-Колы. А еще футболка светится в темноте! Мы не считаем, что
-                            это связанно с тем, что она лежала рядом с радиоактивными отходами, поэтому можем дать вам гарантию!
-                            Мы гарантируем вам, что вы не умрете при ношении футболки в течение года. В противном случае,
-                            мы вернем вам деньги!
-                            <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac mollis sem. Mauris sit amet
-                            ipsum malesuada, molestie ante at, commodo tortor. Donec a libero ut nunc imperdiet auctor. Etiam
-                            malesuada ultrices ipsum, a efficitur ex porttitor id. Nullam sem nibh, consectetur et fermentum
-                            eu, suscipit quis metus. Aenean eget lacinia risus. Suspendisse tempus lectus at augue ultrices,
-                            a molestie diam vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac
-                            mollis sem. Mauris sit amet ipsum malesuada, molestie ante at, commodo tortor. Donec a libero
-                            ut nunc imperdiet auctor. Etiam malesuada ultrices ipsum, a efficitur ex porttitor id. Nullam
-                            sem nibh, consectetur et fermentum eu, suscipit quis metus. Aenean eget lacinia risus. Suspendisse
-                            tempus lectus at augue ultrices, a molestie diam vehicula. Donec eget tristique </p>
-                    </div>
-                </div>
-                <div class="row text-justify">
-                    <div class="col-md order-xl-2 order-2 order-md-1">
-                        <div class="my-xl-2 mb-5 mt-3">
-                            <img class="float-left align-middle mr-2 pt-2" src="../assets/avatar.png">
-                            <span>Хороший мерч. Однозначно куплю. Уверен, будет круто смотреться под силовой броней.</span>
-                        </div>
-                        <div class="mb-4 pt-lg-3 pt-3 pt-md-0 pt-xl-0">
-                            <img class="float-left align-middle mr-2 pt-2" src="../assets/avatar.png">
-                            <span>Жаль, что у вас нет интернет-магазина, я бы уже сейчас прикупил ее. Живу далеко...</span>
-                        </div>
-                        <form class="mt-5 mt-xl-0 pt-3 pt-xl-1">
-                            <div class="form-row">
-                                <div class="col-lg form-group">
-                                    <label for="inputName" class="d-lg-none d-block">Ваше имя</label>
-                                    <input class="form-control form-control-sm" type="text" id="inputName" placeholder="Ваше Имя">
-                                </div>
-                                <div class="col-lg form-group">
-                                    <label for="inputEmail" class="d-lg-none d-block">Ваш Email</label>
-                                    <input class="form-control form-control-sm" type="email" id="inputEmail" placeholder="Ваш Email">
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col">
-                                    <label for="inputText" class="d-lg-none d-block">Ваше сообщение</label>
-                                    <textarea class="form-control form-control-sm" id="inputText" placeholder="Ваше сообщение"></textarea>
-                                </div>
-                            </div>
-                            <div class="row form-group text-center">
-                                <div class="col">
-                                    <input class="btn btn-primary" type="submit" value="Отправить">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-xl-8 col-md-5 order-xl-1 order-1 order-md-2">
-                        <p>dolor adipiscing elit. Aliquam ac mollis sem. Cras at nunc et ligula lacinia convallis. Suspendisse
-                            euismod dui eget eros lobortis aliquam. Sed vitae orci sit amet tellus auctor finibus. Class
-                            aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Vivamus
-                            augue sem, ullamcorper at dui id, suscipit luctus justo. Cras vitae commodo sapien. Nulla eu
-                            malesuada quam. Duis ac malesuada tortor. Pellentesque vel velit augue. Ut non elit in urna convallis
-                            pellentesque. Sed non nibh non est sagittis luctus nec non felis. Donec consectetur ante a porttitor
-                            dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                            Integer nec lacus in orci feugiat accumsan. Vestibulum quis varius turpis, sed euismod erat.
-                            <br />Скоро во всех штатах нашей страны. P.S. Наличие футболок в Убежищах не предусмотрено и не гарантируется.
-                            О возможности доставки или покупки оптом, узнавайте у местных подразделений Ядер-Колы.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer">
-                <hr/>
-                <img class="w-25 float-md-left" src="../assets/bethesda-studios-icon-black.svg">
-                <img class="my-md-4 mx-3 w-25 float-md-left" src="../assets/bethesda-icon-black.svg">
-                <p class="text-justify">Данный сайт является лабораторной работой и не используется с целью получения выгоды. Все графические изображения,
-                    находящиеся на сайте были найдены в сети Интернет и имеют за собой право на свободное распространение.
-                    Владельцами всех торговых марок и знаков являются Zenimax и Bethesda.</p>
-                <hr />
-                <img class="mr-3" src="../assets/esrb.gif">
-                <img class="mr-3" src="../assets/pegi-18.svg">
-                <img class="mr-3" src="../assets/xbox-one-icon-black.svg">
-                <img class="mr-3" src="../assets/ps4-icon-black.svg">
-                <img class="mr-3" src="../assets/pc-icon-black.svg">
-            </div>
         </div>
         <div class="flex-shrink-1-xl exclude"></div>
     </div>
     <div class="add-theme mt-4 end">footer</div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-    crossorigin="anonymous"></script> 
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="scripts/vue.js"></script>
+    <script src="../scripts/vue-news.js"></script>
 </body>
 
 </html>

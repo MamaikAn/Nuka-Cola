@@ -7,3 +7,7 @@
 .news>.row:nth-child(2)>.col-md {
     border: 2px solid black;
 }
+.overflow {
+    overflow-y: scroll;
+    height: 190px;
+}

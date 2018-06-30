@@ -12,19 +12,19 @@
     <title>Nuka-Cola</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
         crossorigin="anonymous">
 </head>
 
 <body>
 
-<nav-bar id="nav" :logo="logo" :refs="refs" :armor="armor"></nav-bar>
+    <nav-bar id="nav" :logo="logo" :refs="refs" :armor="armor"></nav-bar>
 
     <img class="mw-100 mb-1 slide" src="assets/slide.png">
     <div class="d-flex flex-row justify-content-center">
         <div class="flex-shrink-1-xl exclude"></div>
         <div class="body flex-shrink-0-xl">
-            <div class="d-flex flex-md-row flex-column justify-content-center add-theme subscribe">
+            <div class="d-flex flex-md-row flex-column justify-content-center animate fadeInDown add-theme subscribe">
                 <p class="my-md-auto my-1 mx-2 text-center">Подписаться на новостную рассылку</p>
                 <img class="mx-2 my-auto" src="assets/newsletter-sign-up-tower.svg">
                 <div class="my-md-auto mx-md-2 my-2 h-75 d-flex flex-column flex-md-row justify-content-md-center align-items-center">
@@ -35,7 +35,7 @@
             <hr />
             <div class="news">
                 <div id="adv" class="container-fluid">
-                    <div class="row">
+                    <div class="row animate fadeInLeft">
                         <div class="col-md-4">
                             <img class="mw-100 mb-2" src="assets/adv1.jpg">
                         </div>
@@ -44,7 +44,7 @@
                             <h6></h6>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row animate fadeInRight">
                         <div class="col-md-4 order-md-2">
                             <img class="mw-100 mb-2" src="assets/adv21.jpg">
                         </div>
@@ -53,25 +53,25 @@
                         </div>
                     </div>
                 </div>
-                <h6 class="mt-2 text-center">Частое потребление Ядер-Колы может вызвать зависимость или повлечь за собой лучевое облучение.</h6>
+                <h6 class="mt-2 animate fadeInDown text-center">Частое потребление Ядер-Колы может вызвать зависимость или повлечь за собой лучевое облучение.</h6>
             </div>
             <div id="news-sales">
                 <img class="mw-100 mt-2 slide" src="assets/slide1.jpg">
                 <heading :head="heads[0]"></heading>
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="animate fadeInDown row">
                         <news-sale-col v-for="news in newses" v-bind:key="news.id" v-bind:post="news"></news-sale-col>
                     </div>
                 </div>
                 <heading :head="heads[1]"></heading>
                 <div id="sale-row" class="container-fluid">
-                    <div class="row">
+                    <div class="animate fadeInDown row">
                         <news-sale-col v-for="sale in sales" v-bind:key="sales.id" v-bind:post="sale"></news-sale-col>
                     </div>
                 </div>
                 <heading :head="heads[2]"></heading>
             </div>
-            <div class="container-fluid">
+            <div class="container-fluid animate">
                 <div class="row">
                     <div class="col-md mb-4 mb-md-0">
                         <div class="add-theme">
@@ -92,7 +92,7 @@
                     </div>
                 </div>
             </div>
-            <div id="footer" class="footer">  
+            <div id="footer" class="footer">
                 <brand-footer :brand="brand" :labels="labels"></brand-footer>
             </div>
         </div>
@@ -109,6 +109,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="scripts/vue-main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

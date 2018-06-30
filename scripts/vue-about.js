@@ -2,10 +2,10 @@ Vue.component('block-about', {
     props: ['prop'],
     template: '\
     <div class="row mb-5">\
-    <div class="col-md-4">\
+    <div class="animate fadeInLeftBig col-md-4">\
         <img class="w-100" :src="prop.pic">\
     </div>\
-    <div class="col-md">\
+    <div class="col-md animate fadeInRightBig">\
         <h3 class="text-center my-3">{{prop.title}}</h3>\
         <p class="text-justify">{{prop.bodyUp}}</p>\
         <p class="text-justify">{{prop.bodyDown}}</p>\

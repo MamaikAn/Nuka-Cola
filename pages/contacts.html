@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+    crossorigin="anonymous">
     <title>Contacts</title>
 </head>
 
@@ -25,13 +25,13 @@
             <h3 class="add-theme my-4 text-center py-1 align-middle">Контакты</h3>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md">
+                    <div class="fadeInLeftBig animated col-md">
                         <div class="frame">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3096.0523904079923!2d-77.1827869846435!3d39.10527737953919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cd585a12b181%3A0xaa11179bb0fb5400!2zMTM3MCBQaWNjYXJkIERyLCBSb2NrdmlsbGUsIE1EIDIwODUwLCDQodCo0JA!5e0!3m2!1sru!2sru!4v1525220657554"
                         width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
                     </div>
-                    <div class="col-md mt-3 mt-md-0">
+                    <div class="fadeInRightBig animated col-md mt-3 mt-md-0">
                         <p>Настоящий адрес компании Bethesda:
                             <br /> BETHESDA SOFTWORKS LLC
                             <br />1370 Piccard Drive
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div id="footer" class="footer">  
+            <div id="footer" class="footer fadeInDownBig animated">  
                     <brand-footer :brand="brand" :labels="labels"></brand-footer>
             </div>
         </div>
@@ -62,6 +62,7 @@
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="../scripts/vue-nav-footer.js"></script>
+        <script src="../scripts/animation.js"></script>
 </body>
 
 </html>

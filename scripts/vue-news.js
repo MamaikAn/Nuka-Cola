@@ -13,7 +13,7 @@ Vue.component('comment-list', {
 
 Vue.component('comment-block', {
     props: ['comments', 'url', 'message'],
-    template: '<div class="col-md order-xl-2 order-2 order-md-1">\
+    template: '<div class="col-md order-xl-2 order-2 order-md-1 animate fadeInRightBig">\
     <div class="container-fluid overflow">\
         <comment-list v-for="comment in comments" :key="comment.id" :comment="comment" :img="url"></comment-list>\
     </div>\
@@ -62,17 +62,17 @@ Vue.component('news-block', {
     template: '<div><h3 class="add-theme my-4 text-center py-1 align-middle">{{news.title}}</h3>\
 <div class="container-fluid news">\
     <div class="row mb-xl-3 mb-0">\
-        <div class="col-md-7">\
+        <div class="col-md-7 animate fadeInLeftBig">\
             <img class="mw-100 mb-2 mb-md-0" :src="news.img">\
         </div>\
-        <div class="col-md">\
+        <div class="col-md animate fadeInRightBig">\
             <h3 class="text-center">{{news.author}} {{news.time}}</h3>\
             <p class="text-justify">{{news.bodyUp}}</p>\
         </div>\
     </div>\
     <div class="row text-justify">\
     <comment-block :comments="news.comments" :url="url" :message="message"></comment-block>\
-        <div class="col-xl-8 col-md-5 order-xl-1 order-1 order-md-2">\
+        <div class="col-xl-8 col-md-5 order-xl-1 order-1 order-md-2 animate fadeInLeftBig">\
             <p>{{news.bodyDown}}\
             </p>\
         </div>\

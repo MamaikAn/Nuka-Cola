@@ -17,7 +17,6 @@
 </head>
 
 <body>
-
     <nav-bar id="nav" :logo="logo" :refs="refs" :armor="armor"></nav-bar>
 
     <img class="mw-100 mb-1 slide" src="assets/slide.png">
@@ -35,7 +34,7 @@
             <hr />
             <div class="news">
                 <div id="adv" class="container-fluid">
-                    <div class="row animate fadeInLeft">
+                    <div class="row animate fadeInLeftBig">
                         <div class="col-md-4">
                             <img class="mw-100 mb-2" src="assets/adv1.jpg">
                         </div>
@@ -44,7 +43,7 @@
                             <h6></h6>
                         </div>
                     </div>
-                    <div class="row animate fadeInRight">
+                    <div class="row animate fadeInRightBig">
                         <div class="col-md-4 order-md-2">
                             <img class="mw-100 mb-2" src="assets/adv21.jpg">
                         </div>
@@ -53,27 +52,27 @@
                         </div>
                     </div>
                 </div>
-                <h6 class="mt-2 animate fadeInDown text-center">Частое потребление Ядер-Колы может вызвать зависимость или повлечь за собой лучевое облучение.</h6>
+                <h6 class="mt-2 animate fadeInLeftBig text-center">Частое потребление Ядер-Колы может вызвать зависимость или повлечь за собой лучевое облучение.</h6>
             </div>
             <div id="news-sales">
-                <img class="mw-100 mt-2 slide" src="assets/slide1.jpg">
-                <heading :head="heads[0]"></heading>
+                <img class="mw-100 mt-2 slide animate fadeInDownBig" src="assets/slide1.jpg">
+                <heading class="animate fadeInUpBig" :head="heads[0]"></heading>
                 <div class="container-fluid">
-                    <div class="animate fadeInDown row">
+                    <div class="row animate fadeInDownBig">
                         <news-sale-col v-for="news in newses" v-bind:key="news.id" v-bind:post="news"></news-sale-col>
                     </div>
                 </div>
-                <heading :head="heads[1]"></heading>
+                <heading class="animate fadeInUpBig" :head="heads[1]"></heading>
                 <div id="sale-row" class="container-fluid">
-                    <div class="animate fadeInDown row">
+                    <div class="row animate fadeInDownBig">
                         <news-sale-col v-for="sale in sales" v-bind:key="sales.id" v-bind:post="sale"></news-sale-col>
                     </div>
                 </div>
-                <heading :head="heads[2]"></heading>
+                <heading class="animate fadeInUpBig" :head="heads[2]"></heading>
             </div>
-            <div class="container-fluid animate">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md mb-4 mb-md-0">
+                    <div class="col-md mb-4 mb-md-0 animate fadeInLeftBig">
                         <div class="add-theme">
                             <div class="text-center py-4">
                                 <img src="assets/newsletter-sign-up-tower.svg">
@@ -86,13 +85,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md">
+                    <div class="col-md animate fadeInRightBig">
                         <a class="twitter-timeline" data-width="100%" data-height="100%" href="https://twitter.com/Fallout">Tweets by Fallout</a>
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
             </div>
-            <div id="footer" class="footer">
+            <div id="footer" class="footer animate fadeInDownBig">
                 <brand-footer :brand="brand" :labels="labels"></brand-footer>
             </div>
         </div>
@@ -109,7 +108,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="scripts/vue-main.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/animation.js"></script>
 </body>
 
 </html>

@@ -54,21 +54,21 @@
                 </div>
                 <h6 class="mt-2 animate fadeInLeftBig text-center">Частое потребление Ядер-Колы может вызвать зависимость или повлечь за собой лучевое облучение.</h6>
             </div>
-            <div id="news-sales">
+            <div>
                 <img class="mw-100 mt-2 slide animate fadeInDownBig" src="assets/slide1.jpg">
-                <heading class="animate fadeInUpBig" :head="heads[0]"></heading>
-                <div class="container-fluid">
+                <h3 class="animate fadeInUpBig add-theme my-4 text-center py-1 align-middle">Новости</h3>
+                <div id="news" class="container-fluid">
                     <div class="row animate fadeInDownBig">
                         <news-sale-col v-for="news in newses" v-bind:key="news.id" v-bind:post="news"></news-sale-col>
                     </div>
                 </div>
-                <heading class="animate fadeInUpBig" :head="heads[1]"></heading>
-                <div id="sale-row" class="container-fluid">
+                <h3 class="animate fadeInUpBig add-theme my-4 text-center py-1 align-middle">Акции</h3>
+                <div id="news-sales" class="container-fluid">
                     <div class="row animate fadeInDownBig">
                         <news-sale-col v-for="sale in sales" v-bind:key="sales.id" v-bind:post="sale"></news-sale-col>
                     </div>
                 </div>
-                <heading class="animate fadeInUpBig" :head="heads[2]"></heading>
+                <h3 class="animate fadeInUpBig add-theme my-4 text-center py-1 align-middle">Мы на связи</h3>
             </div>
             <div class="container-fluid">
                 <div class="row">
@@ -108,6 +108,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="scripts/vue-main.js"></script>
+    <script src="scripts/vue-news-vue.js"></script>
     <script src="scripts/animation.js"></script>
 </body>
 

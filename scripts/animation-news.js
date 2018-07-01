@@ -15,7 +15,6 @@ $(window).scroll(function() {
     if ($(this).scrollTop() >= array[i].getBoundingClientRect().top) {
         array[i].classList.remove('fadeOutLeft');
         i++;
-        console.log(i);
     }
     }
 });

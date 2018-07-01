@@ -1,17 +1,28 @@
 Vue.component('NewsSaleCol', {
     props: ['post'],
     template: '\
-    <div class="news-col animate col-md">\
-    <img class="mw-100 mb-2" :src="post.url">\
+    <div v-if="post.id<4" class="news-col animate col-md">\
+    <img class="mw-100 mb-2" :src="url">\
         <h3 class="text-center text-md-left">{{ post.title }}</h3>\
-        <p class="text-justify">{{ post.body }}</p>\
+        <p class="text-justify">{{ body }}<a v-if="visible()" href="pages/news.html">Читать далее</a></p>\
     </div>\
-        '
-})
-
-Vue.component('heading', {
-    props: ['head'],
-    template: '<h3 class="add-theme my-4 text-center py-1 align-middle"> {{ head.title }} </h3>'
+        ',
+    computed: {
+        body: function () {
+            if (typeof this.post.bodyUp === "string") return this.post.bodyUp.substr(0, 170) + "... "
+            else return this.post.body
+        },
+        url: function () {
+            if (typeof this.post.bodyUp === "string") return ".../" + this.post.url
+            else return this.post.url
+        }
+    },
+    methods: {
+        visible: function () {
+            if (typeof this.post.bodyUp === "string") return true;
+            else false
+        }
+    }
 })
 
 Vue.component('advantages', {
@@ -47,7 +58,7 @@ Vue.component('NavBar', {
 })
 
 Vue.component('contact', {
-    props: ['links'], 
+    props: ['links'],
     template: '<div>\
     <div class="col mb-4">\
         <a :href="links.url1">\
@@ -78,43 +89,44 @@ Vue.component('brand-footer', {
     </div>'
 })
 
-new Vue ({
+new Vue({
     el: '#footer',
     data: {
-        brand: {url1: 'assets/bethesda-studios-icon-black.svg', url2: 'assets/bethesda-icon-black.svg', 
-        text: 'Данный сайт является лабораторной работой и не используется с целью получения выгоды. Все графические изображения,\
+        brand: {
+            url1: 'assets/bethesda-studios-icon-black.svg', url2: 'assets/bethesda-icon-black.svg',
+            text: 'Данный сайт является лабораторной работой и не используется с целью получения выгоды. Все графические изображения,\
         находящиеся на сайте были найдены в сети Интернет и имеют за собой право на свободное распространение.\
         Владельцами всех торговых марок и знаков являются Zenimax и Bethesda.'},
         labels: [
-            {id: 1, url: 'assets/esrb.gif'},
-            {id: 2, url: 'assets/pegi-18.svg'},
-            {id: 3, url: 'assets/xbox-one-icon-black.svg'},
-            {id: 4, url: 'assets/ps4-icon-black.svg'},
-            {id: 5, url: 'assets/pc-icon-black.svg'}
+            { id: 1, url: 'assets/esrb.gif' },
+            { id: 2, url: 'assets/pegi-18.svg' },
+            { id: 3, url: 'assets/xbox-one-icon-black.svg' },
+            { id: 4, url: 'assets/ps4-icon-black.svg' },
+            { id: 5, url: 'assets/pc-icon-black.svg' }
         ]
     }
 })
 
-new Vue ({
+new Vue({
     el: "#contacts",
     data: {
         refs: [
-            {id: 1, url1: 'https://vk.com/mamaikan', text1: 'Мы в Вконтакте', img1: 'assets/vk.png',  url2: 'https://twitter.com/Mamaik_An', text2: 'Мы в Twitter', img2: 'assets/twitter.png' },
-            {id: 2, url1: '#', text1: 'Мы в Playstation Network', img1: 'assets/playstation.png', url2: 'https://steamcommunity.com/id/MamaikAn', text2: 'Мы в Steam', img2: 'assets/steam.png' }
+            { id: 1, url1: 'https://vk.com/mamaikan', text1: 'Мы в Вконтакте', img1: 'assets/vk.png', url2: 'https://twitter.com/Mamaik_An', text2: 'Мы в Twitter', img2: 'assets/twitter.png' },
+            { id: 2, url1: '#', text1: 'Мы в Playstation Network', img1: 'assets/playstation.png', url2: 'https://steamcommunity.com/id/MamaikAn', text2: 'Мы в Steam', img2: 'assets/steam.png' }
         ]
     }
 })
 
-new Vue ({
+new Vue({
     el: "#nav",
     data: {
-        logo: {img: 'assets/images1.png', url:'index.html'},
+        logo: { img: 'assets/images1.png', url: 'index.html' },
         refs: [
-            {id: 1, url: 'pages/news.html', text: 'Новости'},
-            {id: 2, url: 'pages/about.html', text: 'О нас'},
-            {id: 3, url: 'pages/contacts.html', text: 'Контакты'}
+            { id: 1, url: 'pages/news.html', text: 'Новости' },
+            { id: 2, url: 'pages/about.html', text: 'О нас' },
+            { id: 3, url: 'pages/contacts.html', text: 'Контакты' }
         ],
-        armor: {url:'https://fluffyf1sh.github.io/Practice/index.html', text: 'Силовая броня'}
+        armor: { url: 'https://fluffyf1sh.github.io/Practice/index.html', text: 'Силовая броня' }
     }
 })
 
@@ -131,19 +143,10 @@ new Vue({
 new Vue({
     el: '#news-sales',
     data: {
-        heads: [
-            { id: 1, title: 'Новости' },
-            { id: 2, title: 'Акции' },
-            { id: 3, title: 'Мы на связи' }
-        ],
-        newses: [
-            { id: 1, url: 'assets/newss.jpg', title: 'Новый торговый автомат', body: 'Представляем вашему вниманию наш новый торговый автомат с холодильником! Теперь Ядер-Кола будет всегда встречать вас своим леденящим объятием. Скоро во всех штатах.' },
-            { id: 2, url: 'assets/news22.jpg', title: 'Крышко-мина!', body: 'Вы не можете разделять понятия ядерного оружия и Ядер-Колы? Теперь и не нужно! Представляем вам нашу новейшую разработку: Крышко-мину! Ба-бах! Теперь, когда ваш враг наступит на эту мину, ему не только оторвет ногу, но и покроет его труп горой крышек! Что может быть лучше, чем смерть врага? Конечно, его смерть и ваше богатство!' },
-            { id: 3, url: 'assets/news33.jpg', title: 'Теперь на 50% меньше радиации!', body: 'Наша новейшая формула позволит вам пить Ядер-Колу и не умирать от лучевой болезни... Ну, или чуть дольше не умирать.' }
-        ],
         sales: [
             { id: 1, url: 'assets/sale1.jpg', title: 'Вы жаждете приключений и много крышек?', body: 'Мы рады сообщить об открытии нового парка развлечений Nuka-World! Вас ждут незабываемые эмоции, море развлечений и несметные богатства! А так же ваши любимые напарники - Bottle и Cappy! Кроме того, приобретая билеты до 1 января, у вас есть уникальная возможность купить два билета по цене одного! Разве это не подарок?' },
             { id: 2, url: 'assets/sale2.jpg', title: 'Примерьте силовую броню на себе уже сегодня!', body: 'Вам не хватает острых ощущениях? Вы всегда мечтали попробовать на себе роль солдата в центре боевых действий? Приезжайте в парк развлечений Nuka-World и опробуйте на себе роль тематического солдата всего за 9.99$/мин! Настоящая силовая броня T-51! Что может быть круче, чем фотографии вас в силовой броне? Ваши друзья вас и не узнают!' },
         ]
     }
 })
+

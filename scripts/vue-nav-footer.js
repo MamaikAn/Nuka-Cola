@@ -63,6 +63,6 @@ new Vue ({
             {id: 2, url: '../pages/about.html', text: 'О нас'},
             {id: 3, url: '../pages/contacts.html', text: 'Контакты'}
         ],
-        armor: {url:'https://fluffyf1sh.github.io/Laboratory/shop.html', text: 'Силовая броня'}
+        armor: {url:'https://fluffyf1sh.github.io/Practice/index.html', text: 'Силовая броня'}
     }
 })

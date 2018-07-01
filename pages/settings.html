@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link href="../styles/about.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/settings.css" rel="stylesheet" type="text/css" />
     <link href="../assets/favic.png" rel="shortcut icon" type="image/png">
     <meta charset="utf-8" />
     <meta name="description" content="Nuka-Cola" />
@@ -11,35 +11,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
-    crossorigin="anonymous">
-    <title>About</title>
+        crossorigin="anonymous">
+    <title>Settings</title>
 </head>
 
 <body>
-        <nav-bar id="nav" :logo="logo" :refs="refs" :armor="armor"></nav-bar>
+    <nav-bar id="nav" :logo="logo" :refs="refs" :armor="armor"></nav-bar>
 
-    <img class="mw-100 slide" src="../assets/aboutsl.jpg">
     <div class="d-flex flex-row justify-content-center">
         <div class="flex-shrink-1-xl exclude"></div>
         <div class="body flex-shrink-0-xl">
-            <div id="all">
-                <h3 class="add-theme my-4 text-center py-1 align-middle"> Сорта Ядер-Колы</h3>
-                <div class="container-fluid">
-                    <block-about v-for="cola in colas" :key="cola.id" :prop="cola"></block-about>
-                </div>
-                <img class="mw-100 slide animate fadeInUpBig" src="../assets/workers.png">
-                <h3 class="animate fadeInDownBig add-theme my-4 text-center py-1 align-middle">Наши сотрудники</h3>
-                <div class="container-fluid">
-                    <block-about v-for="worker in workers" :key="worker.id" :prop="worker"></block-about>
-                </div>
+            <div id="userbox">
+            <div v-if="waitCheck" class="userbox text-center">
+                <form v-on:submit.prevent="check">
+                        <div class="form-group mt-3 mx-auto">
+                            <label for="inputLogin">Login</label>
+                            <input v-model="login" class="form-control" type="text" id="inputLogin" placeholder="username">
+                        </div>
+                        <div class="form-group mt-3 mx-auto">
+                            <label for="inputPassword">Password</label>
+                            <input v-model="password" class="form-control mx-auto" type="inputPassword" id="password" placeholder="*****">
+                        </div>
+                    <div class="row form-group mt-3">
+                        <div class="col">
+                            <input class="btn btn-primary" type="submit" value="Отправить">
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div id="footer" class="footer animate fadeInDownBig">  
-                    <brand-footer :brand="brand" :labels="labels"></brand-footer>
+            <div v-else>
             </div>
+        </div>
         </div>
         <div class="flex-shrink-1-xl exclude"></div>
     </div>
-    <div class="add-theme mt-4 end"><a class="ml-3" href="settings.html">Служ.</a></div>
+    <!-- <div class="add-theme mt-4 end">footer</div> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -47,9 +53,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="../scripts/vue-about.js"></script>
-    <script src="../scripts/vue-nav-footer.js"></script>
-    <script src="../scripts/animation.js"></script>
+    <script src="../scripts/vue-settings.js"></script>
 </body>
 
 </html>

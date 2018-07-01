@@ -1,0 +1,16 @@
+.body {
+    width:1250px;
+}
+.userbox {
+    background-color: black;
+    color: white;
+    height: 250px;
+    width: 300px;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    border: 2px solid white;
+}
+.userbox form div:nth-child(1), .userbox form div:nth-child(2) {
+    width: 80%;
+}

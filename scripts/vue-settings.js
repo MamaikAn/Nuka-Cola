@@ -91,7 +91,7 @@ Vue.component('edit-post', {
     </div>
     <div class="col d-flex flex-column text-justify" px-0>
         <span>{{comment.text}}</span>
-        <button class="w-25 btn btn-danger" @click="deleteComment">Удалить</button>
+        <button class="w-25 btn btn-danger" @click="deleteComment(index)">Удалить</button>
     </div>
 </div>
 </div>
@@ -103,22 +103,22 @@ data: function() {
         selected: '',
         text: '',
         title: '',
-        sindex: '',
+        post: '',
         show: false
     }
 },
 methods: {
     editPost: function() {
-        Vue.set(this.sindex, 'bodyUp', this.text.slice(0, (Math.round(this.text.length/2)))),
-        Vue.set(this.sindex, 'bodyDown', this.text.slice(Math.round(this.text.length/2)))
+        Vue.set(this.post, 'bodyUp', this.text.slice(0, (Math.round(this.text.length/2)))),
+        Vue.set(this.post, 'bodyDown', this.text.slice(Math.round(this.text.length/2)))
         alert('Пост изменен')
     },
     deletePost: function() {
-        this.newses.splice(this.newses.indexOf(this.sindex), 1)
+        this.newses.splice(this.newses.indexOf(this.post), 1)
         this.selected=''
     },
-    deleteComment: function() {
-        this.selected.comments.splice(this.selected.comments.indexOf(this.comment)-1, 1)
+    deleteComment: function(index) {
+    this.selected.comments.splice(index, 1)
     }
 },
 watch: {
@@ -126,7 +126,7 @@ watch: {
       handler() {
         this.text = this.selected.bodyUp + this.selected.bodyDown,
         this.title = this.selected.title,
-        this.sindex = this.selected
+        this.post = this.selected
       }
     }
      //vm.items[indexOfItem] = newValue  =>  Vue.set(vm.items, indexOfItem, newValue)

@@ -22,7 +22,7 @@
         <div class="flex-shrink-1-xl exclude"></div>
         <div class="body flex-shrink-0-xl">
             <div id="news"> 
-                <!-- <div v-if="waitCheck" class="userbox text-center">
+                <div v-if="waitCheck" class="userbox text-center">
                     <form v-on:submit.prevent="check">
                         <div class="form-group mt-3 mx-auto">
                             <label for="inputLogin">Login</label>
@@ -39,7 +39,7 @@
                         </div>
                     </form>
                 </div>
-                <div v-else> -->
+                <div v-else>
                     <div class="mt-3 container-fluid">
                         <div class="row">
                             <div class="col mr-xl-3 mr-0">
@@ -51,7 +51,7 @@
                                 <h3 class="text-center">Редактировать старую запись</h3>
                                 <edit-post :newses="newses"></edit-post>
                             </div>
-                        <!-- </div> -->
+                        </div>
                     </div>
                 </div>
             </div>

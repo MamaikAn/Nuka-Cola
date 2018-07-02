@@ -14,3 +14,9 @@
 .userbox form div:nth-child(1), .userbox form div:nth-child(2) {
     width: 80%;
 }
+.container-fluid>.row>.col {
+    border: 2px solid black;
+}
+.container-fluid>.row>.col:nth-child(2) {
+    border-left: none;
+}

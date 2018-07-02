@@ -1,7 +1,7 @@
 Vue.component('NewsSaleCol', {
     props: ['post'],
     template: '\
-    <div v-if="post.id<4" class="news-col animate col-md">\
+    <div class="news-col animate col-md">\
     <img class="mw-100 mb-2" :src="url">\
         <h3 class="text-center text-md-left">{{ post.title }}</h3>\
         <p class="text-justify">{{ body }}<a v-if="visible()" href="pages/news.html">Читать далее</a></p>\

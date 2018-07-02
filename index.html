@@ -59,7 +59,7 @@
                 <h3 class="animate fadeInUpBig add-theme my-4 text-center py-1 align-middle">Новости</h3>
                 <div id="news" class="container-fluid">
                     <div class="row animate fadeInDownBig">
-                        <news-sale-col v-for="news in newses" v-bind:key="news.id" v-bind:post="news"></news-sale-col>
+                        <news-sale-col v-for="news in newses.slice(0, 3)" v-bind:key="news.id" v-bind:post="news"></news-sale-col>
                     </div>
                 </div>
                 <h3 class="animate fadeInUpBig add-theme my-4 text-center py-1 align-middle">Акции</h3>

@@ -22,7 +22,7 @@
         <div class="flex-shrink-1-xl exclude"></div>
         <div class="body flex-shrink-0-xl">
             <div id="news">
-                <news-block v-for="news in newses" :key="news.id" :news="news" :url="url" :message="message"></news-block>
+                <news-block v-for="news in newses" :key="news.id" :news="news" :message="message"></news-block>
             </div>
             <div id="footer" class="footer animate fadeInDownBig">
                 <brand-footer :brand="brand" :labels="labels"></brand-footer>

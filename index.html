@@ -23,7 +23,7 @@
     <div class="d-flex flex-row justify-content-center">
         <div class="flex-shrink-1-xl exclude"></div>
         <div class="body flex-shrink-0-xl">
-            <div class="d-flex flex-md-row flex-column justify-content-center animate fadeInDown add-theme subscribe">
+            <div class="d-flex flex-md-row flex-column justify-content-center animate fadeInUp add-theme subscribe">
                 <p class="my-md-auto my-1 mx-2 text-center">Подписаться на новостную рассылку</p>
                 <img class="mx-2 my-auto" src="assets/newsletter-sign-up-tower.svg">
                 <div class="my-md-auto mx-md-2 my-2 h-75 d-flex flex-column flex-md-row justify-content-md-center align-items-center">
@@ -55,16 +55,16 @@
                 <h6 class="mt-2 animate fadeInLeftBig text-center">Частое потребление Ядер-Колы может вызвать зависимость или повлечь за собой лучевое облучение.</h6>
             </div>
             <div>
-                <img class="mw-100 mt-2 slide animate fadeInDownBig" src="assets/slide1.jpg">
+                <img class="mw-100 mt-2 slide animate fadeInUpBig" src="assets/slide1.jpg">
                 <h3 class="animate fadeInUpBig add-theme my-4 text-center py-1 align-middle">Новости</h3>
                 <div id="news" class="container-fluid">
-                    <div class="row animate fadeInDownBig">
+                    <div class="row animate fadeInUpBig">
                         <news-sale-col v-for="news in newses.slice(0, 3)" v-bind:key="news.id" v-bind:post="news"></news-sale-col>
                     </div>
                 </div>
                 <h3 class="animate fadeInUpBig add-theme my-4 text-center py-1 align-middle">Акции</h3>
                 <div id="news-sales" class="container-fluid">
-                    <div class="row animate fadeInDownBig">
+                    <div class="row animate fadeInUpBig">
                         <news-sale-col v-for="sale in sales" v-bind:key="sales.id" v-bind:post="sale"></news-sale-col>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div id="footer" class="footer animate fadeInDownBig">
+            <div id="footer" class="footer animate fadeInUpBig">
                 <brand-footer :brand="brand" :labels="labels"></brand-footer>
             </div>
         </div>
